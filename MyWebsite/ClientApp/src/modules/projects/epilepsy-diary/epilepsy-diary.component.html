@@ -1,0 +1,49 @@
+<div class="page-header">
+  <h1>{{projectName}}</h1>
+</div>
+
+<section>
+  <div class="container">
+
+    <app-project [statusPercent]="statusPercent"
+                 [websiteUrl]="websiteUrl"
+                 [githubUrl]="githubUrl"
+                 [tags]="tags"></app-project>
+ 
+    <h2>Overview</h2>
+    <p>
+      Keeping track of your epilepsy conveniently.
+    </p>
+
+    <h2>Background</h2>
+    <p>
+      My older brother has been epileptic since 2012.
+      To help my mum keep track of his seizures, she downloaded a mobile app and used this to record basic information i.e. dates and duration.
+      All was well until one day she could no longer add records.
+      She removed the app, exported that data to pen and paper, and has since been making notes in her diary.
+      These notes also include details such as doctor and hospital appointments, and medication changes.
+    </p>
+    <p>
+      I was talking with my mum one night about how I was struggling for ideas for projects and lack of motivation.
+      Then it hit me. Epilepsy Diary. My goal is to develop an easy to use responsive website and mobile app (iOS and Android) with my mum as the project stack-holder.
+      Post first release, my hope is to expand the user base and introduce more functionality.
+    </p>
+
+    <h2>Use Cases</h2>
+    <ul>
+      <li>A user is associated with a person and role</li>
+      <li>A person contains properties such as forename, surname and email</li>
+      <li>A role describes the type of user such as epileptic, acting on behalf of epileptic and doctor</li>
+      <li>An appointment is associated with a user and location, containing properties such as timestamp and details. A user can have many appointments at many locations</li>
+      <li>A location is associated with a type i.e. hospital and has a name property</li>
+      <li>A file is associated with a seizure and contains a URL property. Useful for pertaining injury images which is stored on a file server</li>
+      <li>A seizure is associated with a type, user and location; contains a timestamp. A seizure can have many files/images</li>
+      <li>Examples of seizure types being tonic-clonic and myoclonic</li>
+      <li>A prescription is associated with a user. Can have many prescription to a user</li>
+      <li>Medication is associated with a prescription and time of day i.e. morning and evening. Has properties such as name, dosage, colour, brand, start date, next refill date and end date. Can have many medications to a prescription. Colour is visually useful when dealing with multiple medications</li>
+    </ul>
+
+    <h2>Database</h2>
+    <img src="../../../../assets/epilepsy-diary-database.png" />
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<div class="blog-container">
+  <div class="blog-header">
+    <div class="blog-author"></div>
+  </div>
+  <div class="blog-body">
+    <div class="blog-title">
+      <h2>
+        <a [routerLink]="url">{{name}}</a>
+      </h2>
+    </div>
+    <div class="blog-summary">
+      <!--<p><i class="fas fa-pencil-alt"></i> posted by Lorna Watson</p>-->
+      <p>{{info}}</p>
+    </div>
+    <div class="blog-tags">
+      <ul>
+        <li><i class="fas fa-tags"></i></li>
+        <li *ngFor="let tag of tags"><span>{{tag}}</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="blog-footer">
+    <ul>
+      <li class="date"><i class="fas fa-clock"></i>updated <span>6th Feb 2020</span></li>
+      <li class="comments">
+        <a [routerLink]="url" routerLinkActive="active"><span>Read more...</span></a>
+      </li>
+    </ul>
+  </div>
+</div>
