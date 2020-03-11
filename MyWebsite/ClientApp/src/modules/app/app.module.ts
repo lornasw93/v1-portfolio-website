@@ -14,6 +14,7 @@ import { AboutComponent } from "../about/about.component";
 import { ContactComponent } from "../contact/contact.component"; 
 import { APP_ROUTES } from "./app.routing";
 import { NavbarComponent } from "../shared/navbar/navbar.component";
+import { FooterComponent } from "../shared/footer/footer.component";
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import { NavbarComponent } from "../shared/navbar/navbar.component";
         HomeComponent,
         AboutComponent,
         ContactComponent,
-        NavbarComponent
+        NavbarComponent,
+        FooterComponent
     ],
     providers: [],
     bootstrap: [AppComponent]
