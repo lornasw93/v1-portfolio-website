@@ -22,9 +22,9 @@ export class ContactComponent implements OnInit {
     onSubmit() {
         alert(this.contactForm.value);
 
-        this.httpClient.post('https://localhost:44363/api/email/', this.fb).subscribe(
-            (response) => console.log(response),
-            (error) => console.log(error)
-        ); 
+        //this.httpClient.post('https://localhost:44363/api/email/', this.fb).subscribe(
+        //    (response) => console.log(response),
+        //    (error) => console.log(error)
+        //); 
     }
 }
