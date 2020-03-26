@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -18,6 +20,12 @@ namespace MyWebsite
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => options.AddPolicy("Default", policy => policy
+                .WithOrigins(Configuration.GetSection("AllowedCorsOrigins").Get<ICollection<string>>().ToArray())
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()));
+
             services.AddControllersWithViews();
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
@@ -34,6 +42,7 @@ namespace MyWebsite
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseCors("Default");
 
             if (!env.IsDevelopment())
                 app.UseSpaStaticFiles();
