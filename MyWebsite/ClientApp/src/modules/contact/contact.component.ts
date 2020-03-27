@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
       body: 'Hi Lorna, \n\n' + this.contactForm.value
     };
 
-    this.httpClient.post('https://localhost:44352/api/email/', model).subscribe(
+    this.httpClient.post('https://c80716a3-7580-4188-bcca-709ba03ab0b8.comms.lornasw.co/api/email/', model).subscribe(
         (response) => console.log(response),
         (error) => console.log(error)
     ); 
