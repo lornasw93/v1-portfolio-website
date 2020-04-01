@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Kulminoituva';
+  src: url('/assets/fonts/Kulminoituva/Kulminoituva.eot');
+  src: url('/assets/fonts/Kulminoituva/Kulminoituva.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/Kulminoituva/Kulminoituva.woff2') format('woff2'), url('/assets/fonts/Kulminoituva/Kulminoituva.woff') format('woff'), url('/assets/fonts/Kulminoituva/Kulminoituva.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .transition() {
   transition: all 0.3s ease-in-out 0s;
   -moz-transition: all 0.3s ease-in-out 0s;
@@ -10,6 +18,15 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.common-header() {
+  background-image: url(https://images.unsplash.com/photo-1484820986637-7ec3e85b394f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1360&q=80);
+  background-size: cover;
+  background-position: top;
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: -8px;
 }
 
 @light-grey: #F7F7F7;
@@ -108,6 +125,10 @@ footer {
   }
 }
 
+h1 {
+  font-family: 'Kulminoituva';
+}
+
 div {
   .blog-body {
     margin: 0 auto;
@@ -147,39 +168,6 @@ div {
     padding: 3px 5px;
   }
 
-  .blog-footer {
-    border-top: 1px solid #e6e6e6;
-    margin: 0 auto;
-    width: 80%;
-
-    ul {
-      margin-bottom: 0 !important;
-      list-style: none;
-      display: flex;
-      flex: row wrap;
-      justify-content: flex-end;
-      padding-left: 0;
-
-      li {
-        color: #999;
-        font-size: .75rem;
-        letter-spacing: 1px;
-        text-align: center;
-        position: relative;
-        white-space: nowrap;
-
-        &:first-child {
-          margin-right: auto;
-        }
-      }
-    }
-
-    ul li.comments, ul li.date {
-      padding-top: .5rem;
-      text-transform: lowercase;
-    }
-  }
-
   .social a {
     color: @almost-black;
     margin-right: 8px;
@@ -202,26 +190,20 @@ div {
 }
 
 div.page-header {
-  padding-top: 100px;
-  padding-bottom: 30px;
+  padding-top: 170px;
   position: relative;
   color: @almost-black;
   text-align: center;
 
   h1 {
-    margin-top: 30px;
+    font-size: 6em;
+    .common-header();
   }
 }
 
-h1 {
-  font-family: 'Arial Black' !important;
+.masthead h1 {
   font-size: 7rem;
-  background-image: url(https://images.unsplash.com/photo-1484820986637-7ec3e85b394f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1360&q=80);
-  background-size: cover;
-  background-position: top;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: -8px;
+  .common-header();
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -247,7 +229,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .masthead h1 {
-  font-size: 4rem;
   margin: 0;
   padding: 0;
 }
@@ -255,10 +236,6 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
-  }
-
-  .masthead h1 {
-    font-size: 5.5rem;
   }
 }
 
@@ -281,11 +258,7 @@ a:hover, a:focus, a:active {
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
   font-weight: 700;
 }
-
-.bg-primary {
-  background-color: #1D809F !important;
-}
-
+ 
 div.tags {
   display: inline;
 
@@ -440,5 +413,17 @@ a.active-link {
     clear: none !important;
     float: right !important;
     max-height: none !important;
+  }
+}
+
+section.projects a {
+  text-decoration: none !important;
+
+  &:hover {
+
+    div.blog-container {
+      box-shadow: 0 1px 20px rgba(0,0,0,.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
   }
 }
