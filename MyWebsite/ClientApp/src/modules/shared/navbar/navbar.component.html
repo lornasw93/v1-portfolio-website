@@ -1,14 +1,14 @@
-<header id="header">
+<header class="header">
   <a [routerLink]="'/'" routerLinkActive="active">
     <img src="../assets/logo.png" class="logo" />
   </a>
-  <nav>
-    <ul>
-      <li><a [routerLink]="'/'"><fa-icon [icon]="faHome"></fa-icon></a></li>
-      <li><a [routerLink]="'/about'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a></li>
-      <li><a href="https://dev.to/lornasw93" target="_blank"><span><fa-icon [icon]="faDev"></fa-icon> Blog</span></a></li>
-      <li><a [routerLink]="'/projects'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Projects</a></li>
-      <li><a [routerLink]="'/contact'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Contact</a></li>
-    </ul>
-  </nav>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu">
+    <li><a [routerLink]="'/'"><fa-icon [icon]="faHome"></fa-icon></a></li>
+    <li><a [routerLink]="'/about'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a></li>
+    <li><a href="https://dev.to/lornasw93" target="_blank"><span><fa-icon [icon]="faDev"></fa-icon> Blog</span></a></li>
+    <li><a [routerLink]="'/projects'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Projects</a></li>
+    <li><a [routerLink]="'/contact'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Contact</a></li>
+  </ul>
 </header>
