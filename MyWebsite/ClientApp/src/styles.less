@@ -49,7 +49,7 @@ html, body {
   color: @almost-black;
 }
 
-html { 
+html {
   scroll-behavior: smooth;
 }
 
@@ -129,14 +129,18 @@ h1 {
   font-family: 'Kulminoituva';
 }
 
+* {
+  //border:  1px solid red;
+}
+
 div {
   .blog-body {
     margin: 0 auto;
     width: 80%;
   }
 
-  .blog-title h3 a {
-    color: @almost-black;
+  .blog-title h3 {
+    color: @secondary!important;
   }
 
   .blog-summary p {
@@ -149,6 +153,10 @@ div {
     flex-wrap: wrap;
     list-style: none;
     padding-left: 0;
+
+    li {
+      margin: 3px 0;
+    }
   }
 
   .blog-tags li + li {
@@ -231,7 +239,7 @@ div.page-header {
     font-style: italic;
   }
 }
- 
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
