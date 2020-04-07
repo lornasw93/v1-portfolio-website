@@ -1,22 +1,25 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core'
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-    selector: 'app-project-overview',
-    templateUrl: './project-overview.component.html'
+  selector: 'app-project-overview',
+  templateUrl: './project-overview.component.html'
 })
 export class ProjectOverviewComponent implements OnInit {
+  @Input() name: string;
+  @Input() url: string;
+  @Input() websiteUrl: string;
+  @Input() githubUrl: string;
+  @Input() info: string;
+  @Input() icon: string;
+  @Input() tags: string[];
 
-    @Input() name: string;
+  faGlobe = faGlobe;
+  faGithub = faGithub;
 
-    @Input() url: string;
+  constructor() { }
 
-    @Input() info: string;
-
-    @Input() tags: string[];
-     
-    constructor() { }
-
-    ngOnInit() {
-    }
-
+  ngOnInit() {
+  }
 }

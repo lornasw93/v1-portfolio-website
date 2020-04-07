@@ -129,10 +129,6 @@ h1 {
   font-family: 'Kulminoituva';
 }
 
-* {
-  //border:  1px solid red;
-}
-
 div {
   .blog-body {
     margin: 0 auto;
@@ -140,11 +136,13 @@ div {
   }
 
   .blog-title h3 {
-    color: @secondary!important;
+    color: @secondary !important;
   }
 
-  .blog-summary p {
-    color: #4d4d4d;
+  .blog-summary {
+    p {
+      color: #4d4d4d;
+    }
   }
 
   .blog-tags ul {
@@ -156,6 +154,12 @@ div {
 
     li {
       margin: 3px 0;
+
+      span {
+        background-color: @secondary;
+        color: #fff;
+        border: none;
+      }
     }
   }
 
