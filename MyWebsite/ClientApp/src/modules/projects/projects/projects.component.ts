@@ -1,26 +1,42 @@
 import { Component, OnInit } from '@angular/core';
+import { faMedkit, faChartLine, faComments, faMapMarkedAlt, faUser, faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faUmbraco } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-    selector: 'app-projects',
-    templateUrl: './projects.component.html'
+  selector: 'app-projects',
+  templateUrl: './projects.component.html'
 })
 export class ProjectsComponent implements OnInit {
-    constructor() { }
+  constructor() { }
 
-    epilepsyDiaryInfo = 'Keeping track of your epilepsy i.e. seizure info, medications, doctor appointments etc.';
-    epilepsyDiaryTags = ['Angular 9', '.NET Core', 'Swagger'];
+  faMedkit = faMedkit;
+  faChartLine = faChartLine;
+  faComments = faComments;
+  faMapMarkedAlt = faMapMarkedAlt;
+  faUser = faUser;
+  faRocket = faRocket;
+  faUmbraco = faUmbraco;
 
-    commsServiceInfo = 'A micro-service that works between my projects to allow for text messaging, emails and push notifications.';
-    commsServiceTags = ['.NET Core', 'Twilio', 'SMTP', 'API', 'MVC'];
+  epilepsyDiaryInfo = 'Keeping track of your epilepsy i.e. seizure info, medications, doctor appointments etc.';
+  epilepsyDiaryTags = ['Angular 9', '.NET Core', 'Swagger'];
 
-    csvToMapInfo = 'Parsing a list of postcodes in both .CSV / .JSON file formats to a map using marker clusters from Google Maps API.';
-    csvToMapTags = ['Google Maps', 'CSV', 'JSON'];
+  commsServiceInfo = 'A micro-service that works between my projects with the purpose of text messaging, emails and push notifications.';
+  commsServiceTags = ['.NET Core', 'Twilio', 'SMTP', 'API', 'MVC'];
 
-    devopStatsInfo = 'Providing useful stats by combining typical everyday queries using Azure DevOps REST API.';
-    devopStatsTags = ['Azure DevOps', '.NET Core', 'Angular', 'Swagger', 'REST API'];
+  csvToMapInfo = 'Parsing a list of postcodes in both .CSV / .JSON file formats to a map using marker clusters from Google Maps API.';
+  csvToMapTags = ['Google Maps', 'CSV', 'JSON'];
 
-    umbraco8Info = "Generic Umbraco website (version 8) including pages such as blogs, features and pricing.";
-    umbraco8Tags = ['CMS', 'Umbraco'];
+  devopStatsInfo = 'Providing useful stats by combining typical everyday queries using Azure DevOps REST API into a dashboard-type site.';
+  devopStatsTags = ['Azure DevOps', '.NET Core', 'Angular', 'Swagger', 'REST API'];
 
-    ngOnInit() { }
+  umbraco8Info = "Generic Umbraco website (version 8) including pages such as blogs, features and pricing.";
+  umbraco8Tags = ['CMS', 'Umbraco'];
+
+  gitlandArmyInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
+  gitlandArmyTags = ['.NET Core', 'Angular','MVC', 'Swagger'];
+
+  identityServerInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
+  identityServerTags = ['Abc', 'Def'];
+
+  ngOnInit() { }
 }

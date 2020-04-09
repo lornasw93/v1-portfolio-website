@@ -2,45 +2,42 @@
   <h1>projects</h1>
 </div>
 
-<section class="projects">
-  <div class="container">
-    <div class="posts">
-      <div class="row">
-        <div class="col-md-4">
-          <app-project-overview name="Epilepsy Diary"
-                                url="/projects/epilepsy-diary"
-                                [info]="epilepsyDiaryInfo"
-                                [tags]="epilepsyDiaryTags"></app-project-overview>
-        </div>
-        <div class="col-md-4">
-          <app-project-overview name="DevOp Stats"
-                                url="/projects/devop-stats"
-                                websiteUrl="https://devopstats.co"
-                                githubUrl="https://github.com/lornasw93/devopstats"
-                                [info]="devopStatsInfo"
-                                [tags]="devopStatsTags"></app-project-overview>
-        </div>
-        <div class="col-md-4">
-          <app-project-overview name="Comms Service"
-                                url="/projects/comms-service"
-                                [info]="commsServiceInfo"
-                                [tags]="commsServiceTags"></app-project-overview>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <app-project-overview name="Csv to Map"
-                                url="/projects/csv-to-map"
-                                [info]="csvToMapInfo"
-                                [tags]="csvToMapTags"></app-project-overview>
-        </div>
-        <div class="col-md-4">
-          <app-project-overview name="Umbraco 8"
-                                url="/projects/umbraco8"
-                                [info]="umbraco8Info"
-                                [tags]="umbraco8Tags"></app-project-overview>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<div class="container">
+  <section class="projects">
+    <app-project-overview name="Epilepsy Diary"
+                          url="/projects/epilepsy-diary"
+                          [info]="epilepsyDiaryInfo"
+                          [tags]="epilepsyDiaryTags"
+                          [icon]="faMedkit"></app-project-overview>
+    <app-project-overview name="DevOp Stats"
+                          url="/projects/devop-stats"
+                          [info]="devopStatsInfo"
+                          [tags]="devopStatsTags"
+                          [icon]="faChartLine"></app-project-overview>
+    <app-project-overview name="Comms Service"
+                          url="/projects/comms-service"
+                          [info]="commsServiceInfo"
+                          [tags]="commsServiceTags"
+                          [icon]="faComments"></app-project-overview>
+    <app-project-overview name="Csv to Map"
+                          url="/projects/csv-to-map"
+                          [info]="csvToMapInfo"
+                          [tags]="csvToMapTags"
+                          [icon]="faMapMarkedAlt"></app-project-overview>
+    <app-project-overview name="Umbraco 8"
+                          url="/projects/umbraco8"
+                          [info]="umbraco8Info"
+                          [tags]="umbraco8Tags"
+                          [icon]="faUmbraco"></app-project-overview>
+    <app-project-overview name="Gitland Army"
+                          url="/projects/umbraco8"
+                          [info]="gitlandArmyInfo"
+                          [tags]="gitlandArmyTags"
+                          [icon]="faRocket"></app-project-overview>
+    <app-project-overview name="Identity Server"
+                          url="/projects/umbraco8"
+                          [info]="identityServerInfo"
+                          [tags]="identityServerTags"
+                          [icon]="faUser"></app-project-overview>
+  </section>
+</div>

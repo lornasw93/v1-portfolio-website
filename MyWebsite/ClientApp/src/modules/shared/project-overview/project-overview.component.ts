@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
 
 @Component({
   selector: 'app-project-overview',
@@ -16,7 +15,6 @@ export class ProjectOverviewComponent implements OnInit {
   @Input() tags: string[];
 
   faGlobe = faGlobe;
-  faGithub = faGithub;
 
   constructor() { }
 

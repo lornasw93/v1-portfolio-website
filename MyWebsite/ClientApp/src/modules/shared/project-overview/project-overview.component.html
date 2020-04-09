@@ -1,18 +1,13 @@
 <a [routerLink]="url">
-  <div class="blog-container">
-    <div class="blog-body">
-      <div class="blog-title">
-        <h3>{{name}}</h3>
-      </div>
-      <div class="blog-summary">
-        <p>{{info}}</p>
-      </div>
-      <div class="blog-tags">
-        <ul>
-          <li><i class="fas fa-tags"></i></li>
-          <li *ngFor="let tag of tags"><span>{{tag}}</span></li>
-        </ul>
-      </div>
-    </div>
+  <div class="blog-body text-center">
+    <fa-icon [icon]="icon" size="6x"></fa-icon>
+
+    <h4>{{name}}</h4>
+    <p>{{info}}</p>
+
+    <ul class="tags">
+      <li><i class="fas fa-tags"></i></li>
+      <li *ngFor="let tag of tags"><span>{{tag}}</span></li>
+    </ul>
   </div>
 </a>
