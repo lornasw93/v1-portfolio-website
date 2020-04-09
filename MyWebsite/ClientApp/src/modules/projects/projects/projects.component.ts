@@ -24,7 +24,7 @@ export class ProjectsComponent implements OnInit {
   commsServiceTags = ['.NET Core', 'Twilio', 'SMTP', 'API', 'MVC'];
 
   csvToMapInfo = 'Parsing a list of postcodes in both .CSV / .JSON file formats to a map using marker clusters from Google Maps API.';
-  csvToMapTags = ['Google Maps', 'CSV', 'JSON'];
+  csvToMapTags = ['Google Maps', 'CSV', 'JSON', 'API'];
 
   devopStatsInfo = 'Providing useful stats by combining typical everyday queries using Azure DevOps REST API into a dashboard-type site.';
   devopStatsTags = ['Azure DevOps', '.NET Core', 'Angular', 'Swagger', 'REST API'];
@@ -33,10 +33,10 @@ export class ProjectsComponent implements OnInit {
   umbraco8Tags = ['CMS', 'Umbraco'];
 
   gitlandArmyInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
-  gitlandArmyTags = ['.NET Core', 'Angular','MVC', 'Swagger'];
+  gitlandArmyTags = ['.NET Core', 'Angular', 'MVC', 'Swagger', 'API'];
 
   identityServerInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
-  identityServerTags = ['Abc', 'Def'];
+  identityServerTags = ['.NET Core', 'Authentication', 'API'];
 
   ngOnInit() { }
 }
