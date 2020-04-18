@@ -36,7 +36,7 @@ export class ProjectsComponent implements OnInit {
   gitlandArmyTags = ['.NET Core', 'Angular', 'MVC', 'Swagger', 'API'];
 
   identityServerInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
-  identityServerTags = ['.NET Core', 'Authentication', 'API'];
+  identityServerTags = ['.NET Core', 'Auth', 'API'];
 
   ngOnInit() { }
 }
