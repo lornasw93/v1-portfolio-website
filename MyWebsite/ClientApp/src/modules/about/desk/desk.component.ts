@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { faAmazon, faEbay } from '@fortawesome/free-brands-svg-icons';
-import { faFileExport } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-desk',
