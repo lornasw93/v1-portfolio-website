@@ -7,7 +7,6 @@ import { ProjectBaseService } from '../../../core/project.base.service';
 })
 export class DevOpStatsComponent extends ProjectBaseService implements OnInit {
   projectName = 'devop stats';
-  statusPercent = 80;
   websiteUrl = 'https://devopstats.co';
   githubUrl = 'https://github.com/lornasw93/devopstats';
   tags = ['Azure DevOps', '.NET Core', 'Angular', 'Swagger', 'REST API'];

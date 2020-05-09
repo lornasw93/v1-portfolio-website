@@ -7,7 +7,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
     templateUrl: './project.component.html'
 })
 export class ProjectComponent implements OnInit {
-    @Input() statusPercent: number;
     @Input() websiteUrl: string;
     @Input() githubUrl: string;
     @Input() tags: string[];

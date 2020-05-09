@@ -7,7 +7,6 @@ import { ProjectBaseService } from '../../../core/project.base.service';
 })
 export class EpilepsyDiaryComponent extends ProjectBaseService implements OnInit {
     projectName = 'epilepsy diary';
-    statusPercent = 40;
     websiteUrl = 'https://epilepsy-diary.co';
     githubUrl = 'https://github.com/lornasw93/epilepsy-diary';
     tags = ['Angular 9', '.NET Core', 'Swagger'];

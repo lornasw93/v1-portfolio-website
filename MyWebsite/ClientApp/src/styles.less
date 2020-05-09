@@ -35,10 +35,12 @@
   padding: 3rem;
 }
 
-@light-grey: #F7F7F7;
-@secondary: #0192C7;
-@almost-black: #212529;
 /*#endregion*/
+
+@primary: #BB86FC;
+@secondary: #3700B3;
+@almost-black: #121212;
+@lighter-lack: #292929;
 
 *, ::after, ::before {
   .box-sizing();
@@ -53,8 +55,8 @@ html, body {
   min-height: 100%;
   padding: 0;
   margin: 0;
-  color: @almost-black;
-  background: @light-grey;
+  background: @almost-black;
+  color: #fff;
 }
 
 html {
@@ -100,18 +102,18 @@ h1 {
 }
 
 div.social a {
-  color: @almost-black;
+  color: @primary;
   margin-right: 8px;
 
   &:hover, &:focus, &:active {
-    color: #155d74;
+    color: @secondary;
   }
 }
 
 div.page-header {
   padding-top: 120px;
   position: relative;
-  color: @almost-black;
+  color: @primary;
   text-align: center;
 
   h1 {
@@ -161,11 +163,11 @@ a:hover, a:focus, a:active {
 }
 
 a {
-  color: @secondary;
+  color: @primary;
 }
 
 a.active-link {
-  border-bottom: 1px solid @secondary;
+  border-bottom: 1px solid @primary;
 }
 
 /*#region Header*/
@@ -189,39 +191,38 @@ a.active-link {
     li a {
       display: block;
       margin-top: 7px;
-      margin-right: 15px;
-      margin-left: 15px;
+      margin-right: 25px;
+      margin-left: 25px;
       text-decoration: none;
       font-size: 11px;
-      text-transform: uppercase;
+      text-transform: lowercase;
       display: block;
       font-family: 'Raleway', sans-serif;
       bottom: 0;
       letter-spacing: 1px;
-      font-weight: 600;
-      color: @almost-black;
+      color: @primary;
 
       &:hover, &:active, &:focus {
         cursor: pointer;
         text-decoration: none !important;
-        color: @secondary;
+        color: @primary;
       }
     }
+  }
+
+  .logo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+    float: left;
+    margin-left: @header-outer-margin;
+    margin-top: 16px;
+    margin-bottom: 15px;
   }
 
   .menu {
     clear: both;
     max-height: 0;
     transition: max-height .2s ease-out;
-  }
-
-  a img.logo {
-    height: 30px;
-    display: block;
-    float: left;
-    margin-left: @header-outer-margin;
-    margin-top: 16px;
-    margin-bottom: 15px;
   }
 
   .menu-icon {
@@ -235,7 +236,7 @@ a.active-link {
   }
 
   .menu-icon .navicon {
-    background: #333;
+    background: #FFF;
     display: block;
     height: 2px;
     position: relative;
@@ -313,6 +314,7 @@ a.active-link {
     max-height: none !important;
   }
 }
+
 /*#endregion*/
 
 /*#region Projects*/
@@ -336,20 +338,21 @@ a.active-link {
 
 .blog-body {
   display: inline-block;
-  border: 1px solid #e2e5e8;
+  //  border: 1px solid #e2e5e8;
   border-radius: 8px;
   box-shadow: 0 1px 20px rgba(0,0,0,.25);
   display: inline-block;
   padding: 30px;
   transition: all .25s ease-in-out;
   margin-bottom: 40px;
+  background: @lighter-lack;
 
   h4 {
-    color: @secondary !important;
+    color: @primary !important;
   }
 
   p {
-    color: #4d4d4d;
+    color: #fff;
     margin-bottom: 0;
     font-size: 14px;
   }
@@ -365,8 +368,21 @@ a.active-link {
 
   .ng-fa-icon svg {
     margin-bottom: 30px !important;
-    color: @secondary;
+    color: @primary;
   }
+}
+
+.tags() {
+  border-radius: 3px;
+  font-size: .60rem;
+  letter-spacing: .5px;
+  text-transform: uppercase !important;
+  white-space: nowrap;
+  padding: 3px 5px;
+  background-color: @primary;
+  color: @lighter-lack;
+  border: none;
+  font-weight: 500;
 }
 
 ul.tags {
@@ -382,18 +398,15 @@ ul.tags {
     margin: 3px;
 
     span {
-      border-radius: 3px;
-      font-size: .60rem;
-      letter-spacing: .5px;
-      text-transform: uppercase !important;
-      white-space: nowrap;
-      padding: 3px 5px;
-      background-color: @secondary;
-      color: #fff;
-      border: none;
+      .tags();
     }
   }
 }
+
+span.custom-badge {
+  .tags();
+}
+
 
 @media screen and (min-width: 480px) {
   .blog-body {
@@ -432,7 +445,7 @@ div.container-fluid {
     text-transform: uppercase !important;
     white-space: nowrap;
     padding: 3px 5px;
-    background-color: @secondary;
+    background-color: @primary;
     color: #fff;
     border: none;
 
@@ -445,7 +458,7 @@ div.container-fluid {
 
 div.left-half {
   .half();
-  background-color: @secondary;
+  background-color: @primary;
 }
 
 div.right-half {

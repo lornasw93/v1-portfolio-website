@@ -1,23 +1,10 @@
 <div *ngFor="let tag of tags" class="tags">
-  <span class="badge badge-primary">{{tag}}</span>
+  <span class="custom-badge">{{tag}}</span>
 </div>
-
 <br>
 
-<a href="websiteUrl">
-  <fa-icon [icon]="faGlobe"></fa-icon>
-  {{websiteUrl}}
-</a>
-
+<a href="websiteUrl"><fa-icon [icon]="faGlobe"></fa-icon> {{websiteUrl}}</a>
 <br>
 
-<a href="githubUrl">
-  <fa-icon [icon]="faGithub"></fa-icon>
-  {{githubUrl}}
-</a>
-
-<br>
-
-<p>{{statusPercent}}% done</p>
-
+<a href="githubUrl"><fa-icon [icon]="faGithub"></fa-icon> {{githubUrl}}</a>
 <hr>

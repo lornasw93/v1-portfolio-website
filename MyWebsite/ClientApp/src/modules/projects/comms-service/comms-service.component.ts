@@ -7,7 +7,6 @@ import { ProjectBaseService } from '../../../core/project.base.service';
 })
 export class CommsServiceComponent extends ProjectBaseService implements OnInit {
     projectName = 'comms service';
-    statusPercent = 20;
     websiteUrl = 'https://comms-service.lornasw.co';
     githubUrl = 'https://github.com/lornasw93/comms-service';
     tags = ['.NET Core', 'Twilio', 'SMTP', 'API', 'MVC'];
