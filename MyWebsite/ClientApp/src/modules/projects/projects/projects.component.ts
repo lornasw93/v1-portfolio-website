@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
   devopStatsInfo = 'Providing useful stats by combining typical everyday queries using Azure DevOps REST API into a dashboard-type site.';
   devopStatsTags = ['Azure DevOps', '.NET Core', 'Angular', 'Swagger', 'REST API'];
 
-  umbraco8Info = "Generic Umbraco website (version 8) including pages such as blogs, features and pricing.";
+  umbraco8Info = "Generic Umbraco (version 8) website including pages such as blogs, features and pricing.";
   umbraco8Tags = ['CMS', 'Umbraco'];
 
   gitlandArmyInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";

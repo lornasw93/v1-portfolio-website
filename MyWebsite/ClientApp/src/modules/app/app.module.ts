@@ -10,11 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component'; 
 import { ProjectsModule } from "../projects/projects.module";
 import { HomeComponent } from "../home/home.component";
-import { AboutComponent } from "../about/about.component";
 import { ContactComponent } from "../contact/contact.component"; 
 import { APP_ROUTES } from "./app.routing";
 import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { FooterComponent } from "../shared/footer/footer.component";
+import { AboutModule } from "../about/about.module";
 
 @NgModule({
     imports: [
@@ -26,13 +26,13 @@ import { FooterComponent } from "../shared/footer/footer.component";
         FontAwesomeModule,
         ReactiveFormsModule,
         NgbModule,
-        ProjectsModule
+    ProjectsModule,
+        AboutModule
     ],
     exports: [],
     declarations: [
         AppComponent,
         HomeComponent,
-        AboutComponent,
         ContactComponent,
         NavbarComponent,
         FooterComponent
