@@ -1,12 +1,11 @@
 <a [routerLink]="url">
-  <div class="blog-body text-center">
+  <div class="project-body text-center">
     <fa-icon [icon]="icon" size="6x"></fa-icon>
 
     <h5>{{name}}</h5>
     <p>{{info}}</p>
 
     <ul class="tags">
-      <li><i class="fas fa-tags"></i></li>
       <li *ngFor="let tag of tags"><span>{{tag}}</span></li>
     </ul>
   </div>

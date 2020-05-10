@@ -40,7 +40,7 @@
 @primary: #BB86FC;
 @secondary: #3700B3;
 @almost-black: #121212;
-@lighter-lack: #292929;
+@lighter-black: #292929;
 
 .hyperlink-tag() {
   border-radius: 3px;
@@ -52,6 +52,14 @@
   background-color: @primary;
   color: @almost-black;
   border: none;
+}
+
+.generic-hyperlink() {
+  &:hover, &:active, &:focus {
+    cursor: pointer;
+    text-decoration: none !important;
+    color: @primary;
+  }
 }
 
 *, ::after, ::before {
@@ -83,30 +91,6 @@ h1 {
   font-family: 'Kulminoituva';
 }
 
-div.social a {
-  color: @primary;
-  margin-right: 8px;
-
-  &:hover, &:focus, &:active {
-    color: @secondary;
-  }
-}
-
-div.page-header {
-  padding-top: 120px;
-  position: relative;
-  color: @primary;
-  text-align: center;
-
-  h1 {
-    text-decoration: underline;
-    font-size: 4em;
-    font-family: Courier New, Courier, monospace;
-    padding: 0;
-    margin-bottom: 80px;
-  }
-}
-
 .masthead {
   min-height: 30rem;
   position: relative;
@@ -125,8 +109,7 @@ div.page-header {
 
   h3 {
     font-weight: 100;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
+    color: #fff;
   }
 }
 
@@ -140,12 +123,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-a:hover, a:focus, a:active {
-  color: #155d74;
-}
-
 a {
   color: @primary;
+  .generic-hyperlink();
 }
 
 a.active-link {
@@ -157,7 +137,6 @@ a.active-link {
 
 .header {
   background: @almost-black;
-  // box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -183,12 +162,7 @@ a.active-link {
       bottom: 0;
       letter-spacing: 1px;
       color: @primary;
-
-      &:hover, &:active, &:focus {
-        cursor: pointer;
-        text-decoration: none !important;
-        color: @primary;
-      }
+      .generic-hyperlink();
     }
   }
 
@@ -232,7 +206,7 @@ a.active-link {
 }
 
 .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
-  background: #333;
+  background: #fff;
   content: '';
   display: block;
   height: 100%;
@@ -299,84 +273,9 @@ a.active-link {
 
 /*#endregion*/
 
-/*#region Projects*/
-.projects {
-  columns: 5 200px;
-  column-gap: 1.5rem;
-  width: 90%;
-  margin: 0 auto;
-
-  a {
-    text-decoration: none !important;
-
-    &:hover {
-      .blog-body {
-        box-shadow: 0 1px 20px rgba(0,0,0,.5);
-        transition: box-shadow 0.3s ease-in-out;
-      }
-    }
-  }
-}
-
-.blog-body {
-  display: inline-block;
-  //  border: 1px solid #e2e5e8;
-  border-radius: 8px;
-  box-shadow: 0 1px 20px rgba(0,0,0,.25);
-  display: inline-block;
-  padding: 30px;
-  transition: all .25s ease-in-out;
-  margin-bottom: 40px;
-  background: @lighter-lack;
-
-  h4 {
-    color: @primary !important;
-  }
-
-  p {
-    color: #fff;
-    margin-bottom: 0;
-    font-size: 14px;
-  }
-
-  a {
-    text-decoration: none;
-    .transition();
-
-    &:hover {
-      color: @secondary;
-    }
-  }
-
-  .ng-fa-icon svg {
-    margin-bottom: 30px !important;
-    color: @primary;
-  }
-}
-
-ul.tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  list-style: none;
-  margin-top: 10px;
-  align-items: center;
-  justify-content: center;
-
-  li {
-    margin: 3px;
-
-    span {
-      .hyperlink-tag();
-    }
-  }
-}
-
 span.custom-badge {
   .hyperlink-tag();
 }
-
-/*#endregion*/
 
 div.container-fluid {
   display: flex;
@@ -397,15 +296,29 @@ div.container-fluid {
   }
 }
 
-section.desk table {
-  td {
-    color: #fff;
-  }
+div.social a {
+  color: @primary;
+  margin-right: 8px;
 
-  td.store {
-    a {
-      .hyperlink-tag();
-    }
+  &:hover, &:active, &:focus {
+    cursor: pointer;
+    text-decoration: none !important;
+    color: @secondary;
+  }
+}
+
+div.page-header {
+  padding-top: 120px;
+  position: relative;
+  color: @primary;
+  text-align: center;
+
+  h1 {
+    text-decoration: underline;
+    font-size: 4em;
+    font-family: Courier New, Courier, monospace;
+    padding: 0;
+    margin-bottom: 80px;
   }
 }
 
@@ -422,16 +335,143 @@ div.right-half {
   }
 }
 
-article img {
-  height: 100px;
+article ul {
+  line-height: 0;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 5;
+  -moz-column-gap: 0px;
+  column-count: 5;
+  column-gap: 0px;
+
+  li {
+    list-style: none;
+  }
 }
 
-article ul li {
-  list-style: none;
+article img {
+  height: 100px;
+  width: 100% !important;
+  height: auto !important;
+}
+
+section.projects {
+  columns: 5 200px;
+  column-gap: 1.5rem;
+  width: 90%;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none !important;
+
+    &:hover {
+      .project-body {
+        box-shadow: 0 1px 20px rgba(0,0,0,.5);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+    }
+  }
+
+  div.project-body {
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 1px 20px rgba(0,0,0,.25);
+    display: inline-block;
+    padding: 30px;
+    transition: all .25s ease-in-out;
+    margin-bottom: 40px;
+    background: @lighter-black;
+
+    h4 {
+      color: @primary !important;
+    }
+
+    p {
+      color: #fff;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+
+    a {
+      text-decoration: none;
+      .transition();
+    }
+
+    .ng-fa-icon svg {
+      margin-bottom: 30px;
+      color: @primary;
+    }
+  }
+
+  ul.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+
+    li {
+      margin: 3px;
+
+      span {
+        .hyperlink-tag();
+      }
+    }
+  }
 }
 
 section.desk {
   img {
     max-width: 100%;
+  }
+
+  table {
+    td {
+      color: #fff;
+    }
+
+    td.store {
+      a {
+        .hyperlink-tag();
+      }
+    }
+  }
+}
+
+.no-p {
+  padding: 0 !important;
+}
+
+@media (max-width: 1200px) {
+  article ul {
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+  }
+}
+
+@media (max-width: 1000px) {
+  article ul {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  article ul {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (max-width: 400px) {
+  article ul {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
   }
 }
