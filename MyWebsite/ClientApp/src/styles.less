@@ -35,13 +35,6 @@
   padding: 3rem;
 }
 
-/*#endregion*/
-
-@primary: #BB86FC;
-@secondary: #3700B3;
-@almost-black: #121212;
-@lighter-black: #292929;
-
 .hyperlink-tag() {
   border-radius: 3px;
   font-size: .70rem;
@@ -61,6 +54,14 @@
     color: @primary;
   }
 }
+/*#endregion*/
+
+/*#region Colours*/
+@primary: #BB86FC;
+@secondary: #3700B3;
+@almost-black: #121212;
+@lighter-black: #292929;
+/*#endregion*/
 
 *, ::after, ::before {
   .box-sizing();
@@ -99,6 +100,7 @@ h1 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
+  height: 100vh;
 
   h1 {
     font-size: 7rem;
@@ -117,23 +119,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
   .masthead {
     height: 100vh;
   }
-}
+}*/
 
 a {
   color: @primary;
   .generic-hyperlink();
 }
 
+/*#region Header*/
+@header-outer-margin: 25px;
+
 a.active-link {
   border-bottom: 1px solid @primary;
 }
-
-/*#region Header*/
-@header-outer-margin: 25px;
 
 .header {
   background: @almost-black;
@@ -474,4 +476,37 @@ section.desk {
     -webkit-column-count: 1;
     column-count: 1;
   }
+}
+
+
+textarea.form-control {
+  border: 1px solid white;
+  background: none;
+  outline: none;
+
+  &:hover, &:active, &:focus {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+  }
+}
+
+input[type=email], input[type=text] {
+  border: 1px solid white;
+  background: none;
+  outline: none;
+
+  &:hover, &:active, &:focus {
+    background: none;
+    outline: none;
+    border: 1px solid white;
+  }
+}
+
+button {
+  border: none;
+  outline: none;
+  background: @secondary;
+  color: white;
+  padding: 5px 3px;
 }
