@@ -119,12 +119,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/*@media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-  }
-}*/
-
 a {
   color: @primary;
   .generic-hyperlink();
@@ -358,7 +352,7 @@ article img {
 }
 
 section.projects {
-  columns: 5 200px;
+  columns: 4 200px;
   column-gap: 1.5rem;
   width: 90%;
   margin: 0 auto;
@@ -478,35 +472,26 @@ section.desk {
   }
 }
 
-
-textarea.form-control {
-  border: 1px solid white;
+.form-control {
+  color: #fff !important;
+  border: 1px solid #fff;
   background: none;
   outline: none;
 
   &:hover, &:active, &:focus {
     background: none;
     outline: none;
-    border: 1px solid white;
-  }
-}
-
-input[type=email], input[type=text] {
-  border: 1px solid white;
-  background: none;
-  outline: none;
-
-  &:hover, &:active, &:focus {
-    background: none;
-    outline: none;
+    box-shadow: none;
     border: 1px solid white;
   }
 }
 
 button {
-  border: none;
+  border: 2px solid @secondary;
   outline: none;
-  background: @secondary;
-  color: white;
-  padding: 5px 3px;
+  background: none;
+  color: @secondary;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
