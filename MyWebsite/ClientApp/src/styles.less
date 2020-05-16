@@ -21,15 +21,6 @@
   box-sizing: border-box;
 }
 
-.common-header() {
-  background-image: url(https://images.unsplash.com/photo-1484820986637-7ec3e85b394f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1360&q=80);
-  background-size: cover;
-  background-position: top;
-  -webkit-background-clip: text;
-  color: transparent;
-  letter-spacing: -8px;
-}
-
 .half() {
   flex: 1;
   padding: 3rem;
@@ -93,18 +84,18 @@ h1 {
 }
 
 .masthead {
-  min-height: 30rem;
   position: relative;
   display: table;
   width: 100%;
   height: auto;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
   height: 100vh;
 
   h1 {
-    font-size: 7rem;
-    .common-header();
+    background-image: url(https://images.unsplash.com/photo-1484820986637-7ec3e85b394f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1360&q=80);
+    background-size: cover;
+    background-position: top;
+    -webkit-background-clip: text;
+    color: transparent;
     margin: 0;
     padding: 0;
   }
@@ -114,6 +105,75 @@ h1 {
     color: #fff;
   }
 }
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .masthead {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    h1 {
+      font-size: 4.2rem;
+      letter-spacing: -4px;
+    }
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .masthead {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+    h1 {
+      font-size: 5rem;
+      letter-spacing: -6px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .masthead {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+
+
+    h1 {
+      font-size: 7rem;
+      letter-spacing: -8px;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+      margin-bottom: 18px;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+}
+
+@media only screen and (min-width: 1200px) {
+}
+
+
+
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
