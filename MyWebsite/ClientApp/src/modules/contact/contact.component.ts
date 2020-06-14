@@ -21,12 +21,12 @@ export class ContactComponent implements OnInit {
 
   onSubmit() {
     var model = {
-      subject: 'Contact Form Submission for lornasw.co',
-      from: 'noreply@lornasw.co',
+      subject: 'Contact Form Submission for lorna.dev',
+      from: 'noreply@lorna.dev',
       body: 'Hi Lorna, \n\n' + this.contactForm.value
     };
 
-    this.httpClient.post('https://c80716a3-7580-4188-bcca-709ba03ab0b8.comms.lornasw.co/api/email/', model).subscribe(
+    this.httpClient.post('https://c80716a3-7580-4188-bcca-709ba03ab0b8.comms.lorna.dev/api/email/', model).subscribe(
         (response) => console.log(response),
         (error) => console.log(error)
     ); 

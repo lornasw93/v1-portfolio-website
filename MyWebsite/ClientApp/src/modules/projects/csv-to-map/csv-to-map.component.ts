@@ -7,7 +7,7 @@ import { ProjectBaseService } from '../../../core/project.base.service';
 })
 export class CsvToMapComponent extends ProjectBaseService implements OnInit { 
     projectName = 'csv to map';
-    websiteUrl = 'https://csv-to-map.lornasw.co';
+    websiteUrl = 'https://csv-to-map.lorna.dev';
     githubUrl = 'https://github.com/lornasw93/csv-to-map';
     tags = ['Google Maps', 'CSV', 'JSON'];
 
