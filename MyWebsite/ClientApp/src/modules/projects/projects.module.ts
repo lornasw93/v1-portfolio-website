@@ -11,19 +11,21 @@ import { PROJECT_ROUTES } from './projects.routing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProjectComponent } from './project/project.component';
 import { ProjectOverviewComponent } from "../shared/project-overview/project-overview.component";
+import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.component";
 
 @NgModule({
-    declarations: [
-        ProjectsComponent,
-        CsvToMapComponent,
-        CommsServiceComponent,
-        EpilepsyDiaryComponent,
-        Umbraco8Component,
-        DevOpStatsComponent,
-        ProjectOverviewComponent,
-        ProjectComponent
-    ],
-    imports: [FontAwesomeModule, CommonModule, RouterModule.forChild(PROJECT_ROUTES)],
-    exports: [RouterModule]
+  declarations: [
+    ProjectsComponent,
+    CsvToMapComponent,
+    CommsServiceComponent,
+    EpilepsyDiaryComponent,
+    Umbraco8Component,
+    DevOpStatsComponent,
+    ProjectOverviewComponent,
+    ProjectComponent,
+    MikesFlooringComponent
+  ],
+  imports: [FontAwesomeModule, CommonModule, RouterModule.forChild(PROJECT_ROUTES)],
+  exports: [RouterModule]
 })
 export class ProjectsModule { }

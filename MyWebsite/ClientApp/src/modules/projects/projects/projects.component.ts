@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faMedkit, faChartLine, faComments, faMapMarkedAlt, faUser, faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faMedkit, faChartLine, faComments, faMapMarkedAlt, faUser, faRocket, faHammer } from '@fortawesome/free-solid-svg-icons';
 import { faUmbraco } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -16,6 +16,7 @@ export class ProjectsComponent implements OnInit {
   faUser = faUser;
   faRocket = faRocket;
   faUmbraco = faUmbraco;
+  faHammer = faHammer;
 
   epilepsyDiaryInfo = 'Keeping track of your epilepsy i.e. seizure info, medications, doctor appointments etc.';
   epilepsyDiaryTags = ['Angular 9', '.NET Core', 'Swagger'];
@@ -37,6 +38,9 @@ export class ProjectsComponent implements OnInit {
 
   identityServerInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
   identityServerTags = ['.NET Core', 'Auth', 'API'];
+
+  mikesFlooringInfo = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum purus sit amet justo malesuada dignissim. Sed eu porttitor ex.";
+  mikesFlooringTags = ['.NET Core', 'Angular', 'Firebase'];
 
   ngOnInit() { }
 }
