@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faLinkedin, faGithub, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
