@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core'
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-project-overview',

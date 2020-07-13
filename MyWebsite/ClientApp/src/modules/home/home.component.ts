@@ -1,19 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { faLinkedin, faGithub, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faChevronDown, faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe, faShareSquare } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
 export class HomeComponent implements OnInit {
-  faLinkedin = faLinkedin;
+  faGlobe = faGlobe;
   faGithub = faGithub;
-  faFacebook = faFacebook;
-  faInstagram = faInstagram;
-  faTwitter = faTwitter;
-
-  faChevronDown = faChevronDown;
+  faShareSquare = faShareSquare;
 
   constructor() { }
 

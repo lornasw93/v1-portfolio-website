@@ -11,8 +11,8 @@ export class ProjectComponent implements OnInit {
     @Input() githubUrl: string;
     @Input() tags: string[];
 
-    faGlobe = faGlobe;
-    faGithub = faGithub;
+       faGlobe = faGlobe;
+      faGithub = faGithub;
 
     constructor() { }
 

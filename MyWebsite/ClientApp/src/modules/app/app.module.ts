@@ -1,12 +1,11 @@
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { ProjectsModule } from "../projects/projects.module";
@@ -28,8 +27,7 @@ import { DeskComponent } from "../desk/desk.component";
     FontAwesomeModule,
     ReactiveFormsModule,
     NgbModule,
-    ProjectsModule,
-    ScrollToModule.forRoot()
+    ProjectsModule
   ],
   exports: [],
   declarations: [
@@ -48,4 +46,3 @@ import { DeskComponent } from "../desk/desk.component";
 export class AppModule {
   constructor() { }
 }
-
