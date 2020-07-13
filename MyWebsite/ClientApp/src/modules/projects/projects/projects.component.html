@@ -1,4 +1,3 @@
-
 <section id="projects" class="services section-bg">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
@@ -6,66 +5,77 @@
       <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-        <div class="icon-box iconbox-epilepsydiary">
-          <div class="icon">
-            <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="medkit" class="svg-inline--fa fa-medkit fa-w-16 fa-6x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M96 480h320V128h-32V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v48H96v352zm96-384h128v32H192V96zm320 80v256c0 26.51-21.49 48-48 48h-16V128h16c26.51 0 48 21.49 48 48zM64 480H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v352zm288-208v32c0 8.837-7.163 16-16 16h-48v48c0 8.837-7.163 16-16 16h-32c-8.837 0-16-7.163-16-16v-48h-48c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16h48v-48c0-8.837 7.163-16 16-16h32c8.837 0 16 7.163 16 16v48h48c8.837 0 16 7.163 16 16z"></path></svg>
-          </div>
-          <h4><a href="">Epilepsy Diary</a></h4>
-          <p>Keeping track of your epilepsy i.e. seizure info, medications, doctor appointments etc.</p>
-        </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-        <div class="icon-box iconbox-devopstats ">
-          <!--<div class="icon">
-            <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="medkit" class="svg-inline--fa fa-medkit fa-w-16 fa-6x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M96 480h320V128h-32V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v48H96v352zm96-384h128v32H192V96zm320 80v256c0 26.51-21.49 48-48 48h-16V128h16c26.51 0 48 21.49 48 48zM64 480H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v352zm288-208v32c0 8.837-7.163 16-16 16h-48v48c0 8.837-7.163 16-16 16h-32c-8.837 0-16-7.163-16-16v-48h-48c-8.837 0-16-7.163-16-16v-32c0-8.837 7.163-16 16-16h48v-48c0-8.837 7.163-16 16-16h32c8.837 0 16 7.163 16 16v48h48c8.837 0 16 7.163 16 16z"></path></svg>
-          </div>-->
-          <h4><a href="">DevOp Stats</a></h4>
-          <p>Providing useful stats by combining typical everyday queries using Azure DevOps REST API into a dashboard-type site.</p>
-          <ul class="tags">
-            <li>Azure DevOps</li>
-            <li>.NET Core</li>
-            <li>Angular</li>
-            <li>Swagger</li>
-            <li>REST API</li>
-          </ul>
-          <div class="pull-right">
-            <!--<a href="https://github.com/lornasw93/devopstats"><fa-icon [icon]="faGithub"></fa-icon></a>-->
-            <!--<a href="https://devopstats.co"><fa-icon [icon]="faGlobe"></fa-icon></a>-->
-          </div>
-        </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+
+
+      <!--<div class="col-lg-3 col-md-5 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="icon-box iconbox-devopstats">
+
+          <a [routerLink]="url">
+            <div class="icon-box iconbox-orange ">
+              <div class="icon">
+                <fa-icon [icon]="faMedkit" size="6x"></fa-icon>
+              </div>
+              <h4><a href="">Epilepsy Diary</a></h4>
+              <p>{{epilepsyDiaryInfo}}</p>
+              <ul class="epilepsyDiaryTags">
+                <li *ngFor="let tag of tags"><span>{{tag}}</span></li>
+              </ul>
+            </div>
+          </a>
+
+
+        </div>
+      </div>-->
+      <!--<div class="col-lg-3 col-md-5 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="icon-box iconbox-commsservice">
-          <!--<div class="icon">
-            <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="comments" class="svg-inline--fa fa-comments fa-w-18 fa-6x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"></path></svg>
-          </div>-->
-          <h4><a href="">Comms Service</a></h4>
-          <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+          <h4>Carpet</h4>
+          <p>We can supply and fit quality carpets at the best prices. Never over pay again!</p>
         </div>
-      </div>
+      </div>-->
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-        <div class="icon-box iconbox-mikesflooring">
-          <!--<div class="icon">
-            <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="hammer" class="svg-inline--fa fa-hammer fa-w-18 fa-6x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M571.31 193.94l-22.63-22.63c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31-28.9-28.9c5.63-21.31.36-44.9-16.35-61.61l-45.25-45.25c-62.48-62.48-163.79-62.48-226.28 0l90.51 45.25v18.75c0 16.97 6.74 33.25 18.75 45.25l49.14 49.14c16.71 16.71 40.3 21.98 61.61 16.35l28.9 28.9-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63l22.63 22.63c6.25 6.25 16.38 6.25 22.63 0l90.51-90.51c6.23-6.24 6.23-16.37-.02-22.62zm-286.72-15.2c-3.7-3.7-6.84-7.79-9.85-11.95L19.64 404.96c-25.57 23.88-26.26 64.19-1.53 88.93s65.05 24.05 88.93-1.53l238.13-255.07c-3.96-2.91-7.9-5.87-11.44-9.41l-49.14-49.14z"></path></svg>
-          </div>-->
-          <h4><a href="">Mike's Flooring</a></h4>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-        </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-        <div class="icon-box iconbox-csvtomap">
-          <!--<div class="icon">
-            <svg role="img" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="map-marked-alt" class="svg-inline--fa fa-map-marked-alt fa-w-18 fa-6x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M288 0c-69.59 0-126 56.41-126 126 0 56.26 82.35 158.8 113.9 196.02 6.39 7.54 17.82 7.54 24.2 0C331.65 284.8 414 182.26 414 126 414 56.41 357.59 0 288 0zm0 168c-23.2 0-42-18.8-42-42s18.8-42 42-42 42 18.8 42 42-18.8 42-42 42zM20.12 215.95A32.006 32.006 0 0 0 0 245.66v250.32c0 11.32 11.43 19.06 21.94 14.86L160 448V214.92c-8.84-15.98-16.07-31.54-21.25-46.42L20.12 215.95zM288 359.67c-14.07 0-27.38-6.18-36.51-16.96-19.66-23.2-40.57-49.62-59.49-76.72v182l192 64V266c-18.92 27.09-39.82 53.52-59.49 76.72-9.13 10.77-22.44 16.95-36.51 16.95zm266.06-198.51L416 224v288l139.88-55.95A31.996 31.996 0 0 0 576 426.34V176.02c0-11.32-11.43-19.06-21.94-14.86z"></path></svg>
-          </div>-->
-          <h4><a href="">CSV to Map</a></h4>
-          <p>Parsing a list of postcodes in both .CSV / .JSON file formats to a map using marker clusters from Google Maps API.</p>
-        </div>
+
+      <!--<app-project-overview name="Epilepsy Diary" url="/projects/epilepsy-diary" [info]="epilepsyDiaryInfo" [tags]="epilepsyDiaryTags" [icon]="faMedkit"></app-project-overview>
+      <app-project-overview name="DevOp Stats" url="/projects/devop-stats" [info]="devopStatsInfo" [tags]="devopStatsTags" [icon]="faChartLine"></app-project-overview>
+      <app-project-overview name="Comms Service" url="/projects/comms-service" [info]="commsServiceInfo" [tags]="commsServiceTags" [icon]="faComments"></app-project-overview>
+      <app-project-overview name="Csv to Map" url="/projects/csv-to-map" [info]="csvToMapInfo" [tags]="csvToMapTags" [icon]="faMapMarkedAlt"></app-project-overview>
+      <app-project-overview name="Mikes Flooring" url="/projects/mikes-flooring" [info]="mikesFlooringInfo" [tags]="mikesFlooringTags" [icon]="faHammer"></app-project-overview>-->
+
+      <!--<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+    <div class="icon-box iconbox-devopstats ">
+      <h4><a href="">DevOp Stats</a></h4>
+      <p>Providing useful stats by combining typical everyday queries using Azure DevOps REST API into a dashboard-type site.</p>
+      <ul class="tags">
+        <li>Azure DevOps</li>
+        <li>.NET Core</li>
+        <li>Angular</li>
+        <li>Swagger</li>
+        <li>REST API</li>
+      </ul>
+      <div class="pull-right">
       </div>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+    <div class="icon-box iconbox-commsservice">
+      <h4><a href="">Comms Service</a></h4>
+      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+    <div class="icon-box iconbox-mikesflooring">
+      <h4><a href="">Mike's Flooring</a></h4>
+      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+    </div>
+  </div>
+  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+    <div class="icon-box iconbox-csvtomap">
+      <h4><a href="">CSV to Map</a></h4>
+      <p>Parsing a list of postcodes in both .CSV / .JSON file formats to a map using marker clusters from Google Maps API.</p>
+    </div>
+  </div>-->
     </div>
   </div>
 </section>
@@ -81,13 +91,7 @@
 
 <div class="container">
   <section class="projects">
-    <app-project-overview name="Epilepsy Diary" url="/projects/epilepsy-diary" [info]="epilepsyDiaryInfo" [tags]="epilepsyDiaryTags" [icon]="faMedkit"></app-project-overview>
-    <app-project-overview name="DevOp Stats" url="/projects/devop-stats" [info]="devopStatsInfo" [tags]="devopStatsTags" [icon]="faChartLine"></app-project-overview>
-    <app-project-overview name="Comms Service" url="/projects/comms-service" [info]="commsServiceInfo" [tags]="commsServiceTags" [icon]="faComments"></app-project-overview>
-    <app-project-overview name="Csv to Map" url="/projects/csv-to-map" [info]="csvToMapInfo" [tags]="csvToMapTags" [icon]="faMapMarkedAlt"></app-project-overview>
-    <app-project-overview name="Umbraco 8" url="/projects/umbraco8" [info]="umbraco8Info" [tags]="umbraco8Tags" [icon]="faUmbraco"></app-project-overview>
-    <app-project-overview name="Mikes Flooring" url="/projects/mikes-flooring" [info]="mikesFlooringInfo" [tags]="mikesFlooringTags" [icon]="faHammer"></app-project-overview>
-  </section>
+    </section>
 </div>-->
 <!--<app-project-overview name="Gitland Army" url="/projects/umbraco8" [info]="gitlandArmyInfo" [tags]="gitlandArmyTags" [icon]="faRocket"></app-project-overview>
 <app-project-overview name="Identity Server" url="/projects/umbraco8" [info]="identityServerInfo" [tags]="identityServerTags" [icon]="faUser"></app-project-overview>-->

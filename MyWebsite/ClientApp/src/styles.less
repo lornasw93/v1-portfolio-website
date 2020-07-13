@@ -85,6 +85,8 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  //background: linear-gradient(45deg, @pale-green-rgba 0%, @dark-rgba 100%), url("assets/background.jpg") center center no-repeat !important;
+  background-size: cover;
 
   .logo {
     font-size: 32px;
@@ -121,8 +123,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#hero, #footer {
-  background: linear-gradient(45deg, @pale-green-rgba 0%, @dark-rgba 100%), url("assets/background.jpg") center center no-repeat;
+#hero {
+  background: linear-gradient(45deg, @pale-green-rgba 0%, @dark-rgba 100%), url("assets/background.jpg") center center no-repeat !important;
   background-size: cover;
 }
 
@@ -574,6 +576,7 @@ section {
   top: 12px;
 }
 /*#endregion*/
+
 .services {
   .icon-box {
     text-align: center;
@@ -591,20 +594,14 @@ section {
       transition: ease-in-out 0.3s;
       position: relative;
 
-      i {
+      fa-icon {
         font-size: 36px;
         transition: 0.5s;
-        position: relative;
-      }
-
-      svg {
-        position: absolute;
-        top: 0;
+        // position: relative;
+        // position: absolute;
+        /*top: 0;
         left: 0;
-
-        path {
-          transition: 0.5s;
-        }
+        transition: 0.5s;*/
       }
     }
 
@@ -632,8 +629,8 @@ section {
   }
 
   .iconbox-epilepsydiary {
-    i, path {
-      fill: #47aeff;
+    fa-icon {
+      color: #47aeff !important;
     }
   }
 
@@ -658,7 +655,7 @@ section {
   .iconbox-csvtomap {
     i, path {
       color: #ff5828;
-    } 
+    }
   }
 }
 
