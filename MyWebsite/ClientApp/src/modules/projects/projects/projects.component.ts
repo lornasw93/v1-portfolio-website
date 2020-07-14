@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faMedkit, faChartLine, faMapMarkedAlt, faUser, faRocket, faHammer } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from "../../../core/meta-data.service";
-import { Title, Meta } from "@angular/platform-browser/platform-browser";
+import { Title, Meta } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-projects',
