@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { faMedkit, faChartLine, faMapMarkedAlt, faUser, faRocket, faHammer } from '@fortawesome/free-solid-svg-icons';
+import { MetaDataService } from "../../../core/meta-data.service";
+import { Title, Meta } from "@angular/platform-browser/platform-browser";
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html'
 })
-export class ProjectsComponent implements OnInit {
-  constructor() { }
-
+export class ProjectsComponent extends MetaDataService implements OnInit {
   faMedkit = faMedkit;
   faChartLine = faChartLine;
   faMapMarkedAlt = faMapMarkedAlt;
@@ -27,5 +27,13 @@ export class ProjectsComponent implements OnInit {
   mikesFlooringInfo = "Complimenting Mike's Facebook group, he wanted a website to ultimately showcase the services he provides.";
   mikesFlooringTags = ['Angular 9', 'Firebase', 'SEO'];
 
-  ngOnInit() { }
+  constructor(titleService: Title,
+    metaService: Meta
+  ) {
+    super(titleService, metaService);
+  }
+
+  ngOnInit() { 
+    this.updateTags('Project', 'project');
+  }
 }

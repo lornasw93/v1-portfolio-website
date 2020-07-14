@@ -13,6 +13,12 @@ export class ContactComponent extends MetaDataService implements OnInit {
   faPhone = faPhone;
   faEnvelope = faEnvelope;
 
+  constructor(titleService: Title,
+    metaService: Meta
+  ) {
+    super(titleService, metaService);
+  }
+
   //constructor(
   //  private fb: FormBuilder,
   //  private httpClient: HttpClient
