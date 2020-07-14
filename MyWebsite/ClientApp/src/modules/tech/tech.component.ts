@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
+import { MetaDataService } from "../../core/meta-data.service";
 
 @Component({
   selector: 'app-tech',
   templateUrl: './tech.component.html'
 })
-export class TechComponent implements OnInit {
+export class TechComponent extends MetaDataService implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.updateTags('Tech', 'tech');
   }
-
 }

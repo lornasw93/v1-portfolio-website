@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { DevOpStatsComponent } from './devop-stats/devop-stats.component';
 import { PROJECT_ROUTES } from './projects.routing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ProjectComponent } from './project/project.component';
 import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.component";
 
 @NgModule({
@@ -16,7 +15,6 @@ import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.componen
     CsvToMapComponent,
     EpilepsyDiaryComponent,
     DevOpStatsComponent,
-    ProjectComponent,
     MikesFlooringComponent
   ],
   imports: [FontAwesomeModule,

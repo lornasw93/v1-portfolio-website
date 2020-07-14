@@ -1,19 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectBaseService } from '../../../core/project.base.service';
+import { MetaDataService } from "../../../core/meta-data.service";
 
 @Component({
   selector: 'app-devop-stats',
   templateUrl: './devop-stats.component.html'
 })
-export class DevOpStatsComponent extends ProjectBaseService implements OnInit {
-  projectName = 'devop stats';
-  websiteUrl = 'https://devopstats.co';
-  githubUrl = 'https://github.com/lornasw93/devopstats';
-  tags = ['Azure DevOps', '.NET Core', 'Angular', 'Swagger', 'REST API'];
- 
-  constructor() {
-    super();
-  }
+export class DevOpStatsComponent extends MetaDataService implements OnInit {
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.updateTags('DevOp Stats', 'projects/devop-stats');
+  }
 }

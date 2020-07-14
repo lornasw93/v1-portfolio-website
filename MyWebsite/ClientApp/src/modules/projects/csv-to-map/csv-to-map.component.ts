@@ -1,22 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectBaseService } from '../../../core/project.base.service';
-import { faClock } from '@fortawesome/free-solid-svg-icons';
+import { Component, OnInit } from '@angular/core'; 
+import { MetaDataService } from "../../../core/meta-data.service";
 
 @Component({
   selector: 'app-csv-to-map',
   templateUrl: './csv-to-map.component.html'
 })
-export class CsvToMapComponent implements OnInit {
-  faClock = faClock;
-
-  //projectName = 'csv to map';
-  //websiteUrl = 'https://csv-to-map.lorna.dev';
-  //githubUrl = 'https://github.com/lornasw93/csv-to-map';
-  //tags = ['Google Maps', 'CSV', 'JSON'];
-
-  constructor() {
-    //super();
+export class CsvToMapComponent extends MetaDataService implements OnInit {
+ 
+  ngOnInit() {
+    this.updateTags('CSV to Map', 'projects/csv-to-map');
   }
-
-  ngOnInit() { }
 }

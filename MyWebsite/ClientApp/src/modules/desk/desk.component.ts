@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { faAmazon, faEbay } from '@fortawesome/free-brands-svg-icons';
+import { MetaDataService } from "../../core/meta-data.service";
 
 @Component({
   selector: 'app-desk',
   templateUrl: './desk.component.html'
 })
-export class DeskComponent implements OnInit {
+export class DeskComponent extends MetaDataService implements OnInit {
   faAmazon = faAmazon;
   faEbay = faEbay;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit() {
+    this.updateTags('Contact', 'desk');
   }
-
 }

@@ -1,19 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectBaseService } from '../../../core/project.base.service';
+import { MetaDataService } from "../../../core/meta-data.service";
 
 @Component({
-    selector: 'app-epilepsy-diary',
-    templateUrl: './epilepsy-diary.component.html'
+  selector: 'app-epilepsy-diary',
+  templateUrl: './epilepsy-diary.component.html'
 })
-export class EpilepsyDiaryComponent extends ProjectBaseService implements OnInit {
-    projectName = 'epilepsy diary';
-    websiteUrl = 'https://epilepsy-diary.co';
-    githubUrl = 'https://github.com/lornasw93/epilepsy-diary';
-    tags = ['Angular 9', '.NET Core', 'Swagger'];
+export class EpilepsyDiaryComponent extends MetaDataService implements OnInit {
 
-    constructor() {
-        super();
-    }
-
-    ngOnInit() { }
+  ngOnInit() {
+    this.updateTags('Epilepsy Diary', 'projects/epilepsy-diary');
+  }
 }
