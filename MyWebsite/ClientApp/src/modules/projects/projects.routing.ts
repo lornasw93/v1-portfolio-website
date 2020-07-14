@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { ProjectsComponent } from "./projects/projects.component";
 import { CsvToMapComponent } from "./csv-to-map/csv-to-map.component";
-import { CommsServiceComponent } from "./comms-service/comms-service.component";
 import { EpilepsyDiaryComponent } from "./epilepsy-diary/epilepsy-diary.component";
 import { DevOpStatsComponent } from "./devop-stats/devop-stats.component";
 import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.component";
@@ -25,13 +24,6 @@ export const PROJECT_ROUTES: Routes = [
     path: 'csv-to-map', component: CsvToMapComponent,
     data: {
       title: 'CSV to Map | Lorna Watson',
-      ogTitle: 'Lorna Watson | Software Developer',
-    }
-  },
-  {
-    path: 'comms-service', component: CommsServiceComponent,
-    data: {
-      title: 'Comms Service | Lorna Watson',
       ogTitle: 'Lorna Watson | Software Developer',
     }
   },

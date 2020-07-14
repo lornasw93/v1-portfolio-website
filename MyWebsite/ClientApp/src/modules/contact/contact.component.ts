@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html'
 })
 export class ContactComponent implements OnInit {
+  faPhone = faPhone;
+  faEnvelope = faEnvelope;
+
   constructor(
     private fb: FormBuilder,
     private httpClient: HttpClient
@@ -15,8 +18,6 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
   }
-
-  faMapMarkedAlt = faMapMarkedAlt;
 
   contactForm = this.fb.group({
     name: ['', Validators.required],

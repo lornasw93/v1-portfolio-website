@@ -25,10 +25,9 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <app-root>Loading...</app-root>
+  <app-root></app-root>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 
   <script>
     !(function ($) {
@@ -41,59 +40,6 @@
               });
           }
         });
-
-
-      $(document).on('click',
-        '.nav-menu a, .mobile-nav a, .scrollto',
-        function (e) {
-          if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-            e.preventDefault();
-            var target = $(this.hash);
-            if (target.length) {
-
-              var scrollto = target.offset().top - scrolltoOffset;
-
-              if ($(this).attr("href") == '#header') {
-                scrollto = 0;
-              }
-
-              $('html, body').animate({
-                scrollTop: scrollto
-              },
-                1500,
-                'easeInOutExpo');
-
-              if ($(this).parents('.nav-menu, .mobile-nav').length) {
-                $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-                $(this).closest('li').addClass('active');
-              }
-            }
-          }
-        });
-
-      // Activate smooth scroll on page load with hash links in the url
-      $(document).ready(function () {
-        if (window.location.hash) {
-          var initial_nav = window.location.hash;
-          if ($(initial_nav).length) {
-            var scrollto = $(initial_nav).offset().top - scrolltoOffset;
-            $('html, body').animate({
-              scrollTop: scrollto
-            },
-              1500,
-              'easeInOutExpo');
-          }
-        }
-      });
-
-      // Porfolio isotope and filter
-      $(window).on('load',
-        function () {
-          var portfolioIsotope = $('.portfolio-container').isotope({
-            itemSelector: '.portfolio-item'
-          });
-        });
-
     })(jQuery);
   </script>
 </body>

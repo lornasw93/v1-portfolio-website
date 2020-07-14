@@ -1,97 +1,62 @@
-<section id="projects" class="services section-bg">
-  <div class="container" data-aos="fade-up">
+<section id="projects">
+  <div class="container">
     <div class="section-title">
       <h2>Projects</h2>
-      <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+      <p>
+        When I hear 'side projects', I think of: buying domains and not using them, half-finished projects and lack of free time.
+        There's also the good side.
+
+      </p>
     </div>
     <div class="row">
-
-
-
-
-      <!--<div class="col-lg-3 col-md-5 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon-box iconbox-devopstats">
-
-          <a [routerLink]="url">
-            <div class="icon-box iconbox-orange ">
-              <div class="icon">
-                <fa-icon [icon]="faMedkit" size="6x"></fa-icon>
-              </div>
-              <h4><a href="">Epilepsy Diary</a></h4>
-              <p>{{epilepsyDiaryInfo}}</p>
-              <ul class="epilepsyDiaryTags">
-                <li *ngFor="let tag of tags"><span>{{tag}}</span></li>
-              </ul>
-            </div>
-          </a>
-
-
-        </div>
-      </div>-->
-      <!--<div class="col-lg-3 col-md-5 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="icon-box iconbox-commsservice">
-          <h4>Carpet</h4>
-          <p>We can supply and fit quality carpets at the best prices. Never over pay again!</p>
-        </div>
-      </div>-->
-
-
-
-      <!--<app-project-overview name="Epilepsy Diary" url="/projects/epilepsy-diary" [info]="epilepsyDiaryInfo" [tags]="epilepsyDiaryTags" [icon]="faMedkit"></app-project-overview>
-      <app-project-overview name="DevOp Stats" url="/projects/devop-stats" [info]="devopStatsInfo" [tags]="devopStatsTags" [icon]="faChartLine"></app-project-overview>
-      <app-project-overview name="Comms Service" url="/projects/comms-service" [info]="commsServiceInfo" [tags]="commsServiceTags" [icon]="faComments"></app-project-overview>
-      <app-project-overview name="Csv to Map" url="/projects/csv-to-map" [info]="csvToMapInfo" [tags]="csvToMapTags" [icon]="faMapMarkedAlt"></app-project-overview>
-      <app-project-overview name="Mikes Flooring" url="/projects/mikes-flooring" [info]="mikesFlooringInfo" [tags]="mikesFlooringTags" [icon]="faHammer"></app-project-overview>-->
-
-      <!--<div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-    <div class="icon-box iconbox-devopstats ">
-      <h4><a href="">DevOp Stats</a></h4>
-      <p>Providing useful stats by combining typical everyday queries using Azure DevOps REST API into a dashboard-type site.</p>
-      <ul class="tags">
-        <li>Azure DevOps</li>
-        <li>.NET Core</li>
-        <li>Angular</li>
-        <li>Swagger</li>
-        <li>REST API</li>
-      </ul>
-      <div class="pull-right">
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+        <a [routerLink]="'/projects/epilepsy-diary'" class="icon-box">
+          <div class="icon">
+            <fa-icon [icon]="faMedkit" size="6x"></fa-icon>
+          </div>
+          <h4>Epilepsy Diary</h4>
+          <p>{{epilepsyDiaryInfo}}</p>
+          <ul class="tags">
+            <li *ngFor="let tag of epilepsyDiaryTags"><span>{{tag}}</span></li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+        <a [routerLink]="'/projects/devop-stats'" class="icon-box">
+          <div class="icon">
+            <fa-icon [icon]="faChartLine" size="6x"></fa-icon>
+          </div>
+          <h4>DevOp Stats</h4>
+          <p>{{devopStatsInfo}}</p>
+          <ul class="tags">
+            <li *ngFor="let tag of devopStatsTags"><span>{{tag}}</span></li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+        <a [routerLink]="'/projects/csv-to-map'" class="icon-box">
+          <div class="icon">
+            <fa-icon [icon]="faMapMarkedAlt" size="6x"></fa-icon>
+          </div>
+          <h4>Csv to Map</h4>
+          <p>{{csvToMapInfo}}</p>
+          <ul class="tags">
+            <li *ngFor="let tag of csvToMapTags"><span>{{tag}}</span></li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+        <a [routerLink]="'/projects/mikes-flooring'" class="icon-box">
+          <div class="icon">
+            <fa-icon [icon]="faHammer" size="6x"></fa-icon>
+          </div>
+          <h4>Mike's Flooring</h4>
+          <p>{{mikesFlooringInfo}}</p>
+          <ul class="tags">
+            <li *ngFor="let tag of mikesFlooringTags"><span>{{tag}}</span></li>
+          </ul>
+        </a>
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-    <div class="icon-box iconbox-commsservice">
-      <h4><a href="">Comms Service</a></h4>
-      <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-    <div class="icon-box iconbox-mikesflooring">
-      <h4><a href="">Mike's Flooring</a></h4>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-    <div class="icon-box iconbox-csvtomap">
-      <h4><a href="">CSV to Map</a></h4>
-      <p>Parsing a list of postcodes in both .CSV / .JSON file formats to a map using marker clusters from Google Maps API.</p>
-    </div>
-  </div>-->
-    </div>
-  </div>
 </section>
-
-
-
-
-
-
-<!--<div class="page-header">
-  <h1>projects</h1>
-</div>
-
-<div class="container">
-  <section class="projects">
-    </section>
-</div>-->
-<!--<app-project-overview name="Gitland Army" url="/projects/umbraco8" [info]="gitlandArmyInfo" [tags]="gitlandArmyTags" [icon]="faRocket"></app-project-overview>
-<app-project-overview name="Identity Server" url="/projects/umbraco8" [info]="identityServerInfo" [tags]="identityServerTags" [icon]="faUser"></app-project-overview>-->
