@@ -38,6 +38,7 @@
     "less": "^3.12.0",
     "npm": "^6.14.6",
     "oidc-client": "^1.10.1",
+    "postcss-minify-selectors": "^4.0.2",
     "rxjs": "^6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"
