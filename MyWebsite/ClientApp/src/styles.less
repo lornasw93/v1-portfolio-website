@@ -10,6 +10,10 @@
 
 @almost-white: #f9f8ff;
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 div.container p a, div.container ul li a, div.container table a {
   border-radius: 3px;
   font-size: .8rem;
@@ -492,7 +496,6 @@ ul.tags {
     margin: 3px;
     border-radius: 3px;
     font-size: .7rem;
-    letter-spacing: .5px;
     text-transform: uppercase !important;
     white-space: nowrap;
     padding: 3px 5px;
@@ -625,40 +628,11 @@ button, .btn {
     color: #fff !important;
   }
 }
-
-
-
-
-
-
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-#desk .container {
-  max-width: 100rem;
-  margin: 0 auto;
-  padding: 0 2rem 2rem;
-}
-
-.heading {
-  font-size: 4rem;
-  font-weight: 500;
-  line-height: 1.5;
-  text-align: center;
-  padding: 3.5rem 0;
-  color: #1a1a1a;
-}
-
-.heading span {
-  display: block;
-}
-
+ 
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  margin: -1rem -1rem;
+  margin: 0;
 }
 
 .gallery-item {
@@ -676,10 +650,6 @@ button, .btn {
   transition: transform 400ms ease-out;
 }
 
-.gallery-image:hover {
-  transform: scale(1.15);
-}
-
 (display: grid) {
   .gallery {
     display: grid;
@@ -690,5 +660,11 @@ button, .btn {
   .gallery,
   .gallery-item {
     margin: 0;
+  }
+}
+
+#about {
+  .gallery-item {
+    flex: 1 0 9rem;
   }
 }
