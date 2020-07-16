@@ -1,22 +1,39 @@
-<header id="header" class="fixed-top ">
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-xl-9 d-flex align-items-center">
-        <h1 class="logo mr-auto"><a href="/">lorna.dev</a></h1>
-        <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-        <nav class="nav-menu d-none d-lg-block">
-          <ul>
-            <li class="active"><a href="/"><fa-icon [icon]="faHome"></fa-icon></a></li>
-            <li><a [routerLink]="'/about'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a></li>
-            <li><a [routerLink]="'/desk'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Desk</a></li>
-            <li><a [routerLink]="'/tech'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Tech</a></li>
-            <li><a href="https://dev.to/lornasw93" target="_blank"><span><fa-icon [icon]="faDev"></fa-icon> Blog</span></a></li>
-            <li><a [routerLink]="'/projects'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Projects (4)</a></li>
-            <li><a href="assets/Lorna_Watson_CV.pdf" target="_blank"><span><fa-icon [icon]="faDownload"></fa-icon> CV</span></a></li>
-            <li><a [routerLink]="'/contact'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="navbar-brand">
+    <div class="logo mr-auto"><a href="/">lorna.dev</a></div>
+    <!--<a href="index.html" class="logo mr-auto"><img src="assets/favicon/logo.png" alt="" class="img-fluid"></a>-->
   </div>
-</header>
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="/"><fa-icon [icon]="faHome"></fa-icon></a></li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/desk'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Desk</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/tech'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Tech</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://dev.to/lornasw93" target="_blank" class="gtag-nav-link-blog">
+          <span><fa-icon [icon]="faDev"></fa-icon> Blog</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/projects'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Projects (4)</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="assets/Lorna-Watson-CV.pdf" target="_blank" class="gtag-nav-link-cv">
+          <span><fa-icon [icon]="faDownload"></fa-icon> CV</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="'/contact'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>

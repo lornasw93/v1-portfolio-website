@@ -52,39 +52,7 @@ a {
   }
 }
 
-#header {
-  transition: all 0.5s;
-  z-index: 997;
-  padding: 20px 0;
-  //background: linear-gradient(45deg, @pale-green-rgba 0%, @dark-rgba 100%), url("assets/background.jpg") center center no-repeat !important;
-  background-size: cover;
-
-  .logo {
-    font-size: 32px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 400;
-    letter-spacing: 2px;
-
-    a {
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';
-      letter-spacing: -.8px;
-      color: @almost-white;
-    }
-
-    img {
-      max-height: 40px;
-    }
-  }
-}
-
-/*#header.header-scrolled, #header.header-inner-pages {
-  background: @dark;
-  padding: 12px 0;
-}*/
-
-@media (max-width: 992px) {
+/*@media (max-width: 992px) {
   #header {
     padding: 12px 0;
   }
@@ -92,14 +60,18 @@ a {
   #header .logo {
     font-size: 28px;
   }
-}
+}*/
 
-#hero, #header, #footer {
+#hero, #footer, nav {
   background: linear-gradient(45deg, @pale-green-rgba 0%, @dark-rgba 100%), url("assets/background.jpg") center center no-repeat !important;
   background-size: cover;
 }
 
-.nav-menu ul {
+nav {
+  padding: 20px 0;
+}
+
+nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -108,7 +80,7 @@ a {
   a {
     display: block;
     position: relative;
-    color: @almost-white;
+    color: @almost-white !important;
     transition: 0.3s;
     font-size: 15px;
     font-weight: 600;
@@ -121,10 +93,29 @@ a {
     white-space: nowrap;
     padding: 10px 0 10px 24px;
   }
+}
 
-  .active-link {
-    border-bottom: 1px solid @almost-white;
+.active-link {
+  border-bottom: 1px solid @almost-white;
+}
+
+.navbar-brand .logo {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+
+  img {
+    height: 40px;
   }
+}
+
+.navbar-brand .logo a {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold' !important;
+  letter-spacing: -.8px !important;
+  color: @almost-white;
 }
 
 #hero, #about, #desk {
@@ -132,7 +123,6 @@ a {
     margin-top: 20px;
   }
 }
-
 /*#region Hero*/
 #hero {
   width: 100%;
@@ -232,7 +222,6 @@ a {
   }
 }
 /*#endregion*/
-
 section {
   padding: 150px 0;
   //overflow: hidden;
@@ -628,7 +617,7 @@ button, .btn {
     color: #fff !important;
   }
 }
- 
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -649,7 +638,6 @@ button, .btn {
   object-fit: cover;
   transition: transform 400ms ease-out;
 }
-
 /*(display: grid) {
   .gallery {
     display: grid;
@@ -662,7 +650,6 @@ button, .btn {
     margin: 0;
   }
 }*/
-
 #about {
   .gallery-item {
     flex: 1 0 9rem;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faHome, faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faDownload, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faDev } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -10,20 +10,14 @@ export class NavbarComponent implements OnInit {
   faHome = faHome;
   faDev = faDev;
   faDownload = faDownload;
+  faBars = faBars;
 
   constructor() { }
 
   ngOnInit() { }
+  navbarOpen = false;
 
-  onToggle() {
-    var toggle = document.getElementById("toggle");
-    if (toggle != null) {
-      toggle.classList.toggle('active');
-    }
-
-    var overlay = document.getElementById('overlay');
-    if (overlay != null) {
-      overlay.classList.toggle('open');
-    }
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 }
