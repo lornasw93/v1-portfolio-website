@@ -10,6 +10,8 @@
 
 @almost-white: #f9f8ff;
 
+@dark-grey: #444;
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -41,6 +43,7 @@ div.social a {
 body {
   font-family: "Roboto", sans-serif;
   background-color: @almost-white;
+  color: #444;
 }
 
 a {
@@ -223,7 +226,7 @@ nav ul {
 }
 /*#endregion*/
 section {
-  padding: 150px 0;
+  padding: 60px 0;
   //overflow: hidden;
   .section-title {
     text-align: center;
@@ -357,7 +360,7 @@ section {
   }
 }
 
-.tech .box {
+#tech .box {
   padding: 20px;
   background: #fff;
   text-align: center;
@@ -373,20 +376,12 @@ section {
     font-size: 16px;
     font-weight: 600;
     color: #fff;
-    background: @pale-red;
-  }
-
-  h4 {
-    font-size: 36px;
-    color: @pale-orange;
-    font-weight: 600;
-    margin-bottom: 20px;
+    background: @pale-orange;
   }
 
   ul {
     padding: 0;
     list-style: none;
-    color: #444444;
     text-align: center;
     line-height: 20px;
     font-size: 14px;
@@ -534,7 +529,7 @@ ul.tags {
       line-height: 24px;
       font-size: 14px;
       margin-bottom: 0;
-      color: #000;
+      color: @dark-grey;
     }
 
     &:hover {
