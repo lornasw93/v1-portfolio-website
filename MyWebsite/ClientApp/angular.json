@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "progress": true,
             "extractCss": true,
             "outputPath": "dist",
