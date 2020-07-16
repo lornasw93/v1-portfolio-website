@@ -145,10 +145,6 @@ nav ul {
     font-size: 20px;
   }
 
-  .animated {
-    animation: up-down 2s ease-in-out infinite alternate-reverse both;
-  }
-
   .container, .container-fluid {
     //padding-top: 84px;
   }
@@ -166,12 +162,7 @@ nav ul {
   }
 
   #hero .container, #hero .container-fluid {
-    padding-top: 68px;
-  }
-
-  #hero .animated {
-    -webkit-animation: none;
-    animation: none;
+    //padding-top: 68px;
   }
 
   #hero .hero-img {
@@ -205,27 +196,8 @@ nav ul {
   }
 }
 
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translateY(-10px);
-  }
-}
 /*#endregion*/
-section {
+section:not(#hero) {
   padding: 60px 0;
   //overflow: hidden;
   .section-title {
