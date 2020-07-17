@@ -1,3 +1,3 @@
 # My Website
 
-Developed in VS 19 using .NET Core and Angular; using Firebase for hosting purposes.
+Developed in Visual Studio 2019 using Angular and Firebase.
