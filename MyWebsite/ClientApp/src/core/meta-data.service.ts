@@ -12,7 +12,7 @@ export abstract class MetaDataService {
 
   title = 'Lorna Watson | Software Developer';
   description = 'Lorna is a software developer based in Leeds, UK with a passion for programming, spreadsheets and data analytics.';
-  image = 'https://firebasestorage.googleapis.com/v0/b/my-website-cbec6.appspot.com/o/laptop-corsair2.jpeg?alt=media&token=06a8227e-99ab-452b-9095-2eb69d431992';
+  image = 'https://lorna.dev/assets/static/thumbnail.jpeg';
   url = 'https://lorna.dev';
 
   // per page that isn't the homepage
@@ -28,7 +28,7 @@ export abstract class MetaDataService {
     this.metaService.updateTag({ name: 'og:title', content: pageTitle });
     this.metaService.updateTag({ name: 'og:url', content: this.url + '/' + partUrl });
     this.metaService.updateTag({ name: 'twitter:title', content: pageTitle });
-     
+
     this.metaService.updateTag({ property: 'og:title', content: pageTitle });
     this.metaService.updateTag({ property: 'og:url', content: this.url + '/' + partUrl });
   }
