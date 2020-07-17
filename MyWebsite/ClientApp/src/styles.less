@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Open Sans Extra Bold';
+  src: url('/assets/open-sans.extrabold.ttf') format('truetype')
+}
+
 @dark: #264653;
 @dark-rgba: rgba(38, 70, 83, 0.9);
 
@@ -46,15 +51,6 @@ body {
   color: #444;
 }
 
-a {
-  color: #5846f9;
-
-  &:hover {
-    color: #8577fb;
-    text-decoration: none;
-  }
-}
-
 /*@media (max-width: 992px) {
   #header {
     padding: 12px 0;
@@ -72,53 +68,57 @@ a {
 
 nav {
   padding: 20px 0;
-}
 
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
 
-  a {
-    display: block;
-    position: relative;
-    color: @almost-white !important;
-    transition: 0.3s;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 0 3px;
-    text-transform: lowercase;
+    a {
+      display: block;
+      position: relative;
+      color: @almost-white !important;
+      transition: 0.3s;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 0 3px;
+      text-transform: lowercase;
+    }
+
+    li {
+      position: relative;
+      white-space: nowrap;
+      padding: 10px 0 10px 24px;
+    }
   }
 
-  li {
-    position: relative;
-    white-space: nowrap;
-    padding: 10px 0 10px 24px;
+  .navbar-brand .logo {
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 2px;
+
+    img {
+      height: 40px;
+    }
+
+    a {
+      font-family: 'Open Sans Extra Bold', sans-serif;
+      letter-spacing: -2px !important;
+      color: @almost-white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
 
 .active-link {
   border-bottom: 1px solid @almost-white;
-}
-
-.navbar-brand .logo {
-  font-size: 32px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 400;
-  letter-spacing: 2px;
-
-  img {
-    height: 40px;
-  }
-}
-
-.navbar-brand .logo a {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold' !important;
-  letter-spacing: -.8px !important;
-  color: @almost-white;
 }
 
 #hero, #about, #desk {
@@ -242,6 +242,8 @@ section:not(#hero) {
 }
 
 #contact {
+  height: 100vh;
+
   img {
     max-width: 100%;
   }
@@ -302,7 +304,7 @@ section:not(#hero) {
 
 #footer {
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
 
   .copyright a {
     color: #fff;
@@ -311,7 +313,7 @@ section:not(#hero) {
   }
 
   .social-links a {
-    font-size: 18px;
+    font-size: 16px;
     display: inline-block;
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -320,8 +322,8 @@ section:not(#hero) {
     margin-right: 4px;
     border-radius: 50%;
     text-align: center;
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
     transition: 0.3s;
 
     &:hover {
@@ -618,7 +620,14 @@ button, .btn {
   }
 }*/
 #about {
+  height: 100vh;
+
   .gallery-item {
     flex: 1 0 9rem;
   }
+}
+
+
+.navbar {
+  padding: .5rem 3rem;
 }
