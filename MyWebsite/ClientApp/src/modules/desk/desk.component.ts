@@ -18,6 +18,6 @@ export class DeskComponent extends MetaDataService implements OnInit {
   }
 
   ngOnInit() {
-    this.updateTags('Contact', 'desk');
+    this.updateTags('Desk', 'desk');
   }
 }

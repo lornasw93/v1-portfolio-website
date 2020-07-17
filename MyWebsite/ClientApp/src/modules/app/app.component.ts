@@ -15,7 +15,7 @@ export class AppComponent extends MetaDataService implements OnInit {
   }
 
   ngOnInit() {
-    this.addInitialTags();
+    this.updateHomeTag();
 
     AOS.init();
   }

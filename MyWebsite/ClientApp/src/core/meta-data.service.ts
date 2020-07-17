@@ -18,48 +18,22 @@ export abstract class MetaDataService {
   // per page that isn't the homepage
   partTitle = ' | Lorna Watson';
 
-  //abstract setupTags();
-
+  // these are tags that will change per page change
   updateTags(tag, partUrl) {
     const pageTitle = tag + this.partTitle;
 
+    // title
     this.titleService.setTitle(pageTitle);
-
     this.metaService.updateTag({ name: 'og:title', content: pageTitle });
-    this.metaService.updateTag({ name: 'og:url', content: this.url + '/' + partUrl });
     this.metaService.updateTag({ name: 'twitter:title', content: pageTitle });
 
-    this.metaService.updateTag({ property: 'og:title', content: pageTitle });
-    this.metaService.updateTag({ property: 'og:url', content: this.url + '/' + partUrl });
+    // url
+    this.metaService.updateTag({ name: 'og:url', content: this.url + '/' + partUrl });
+    this.metaService.updateTag({ property: 'twitter:url', content: this.url + '/' + partUrl });
   }
 
-  addInitialTags() {
+  updateHomeTag() {
     this.titleService.setTitle(this.title);
-    this.metaService.addTags([
-      { name: 'keywords', content: 'Lorna Watson, lorna.dev, lornasw93, programmer, software developer, full stack developer, full stack, developer, dev, portfolio' },
-      { name: 'description', content: this.description },
-      { name: 'robots', content: 'index, follow' },
-      { name: 'author', content: 'Lorna Watson' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-
-      { name: 'og:title', content: this.title },
-      { name: 'og:url', content: this.url },
-      { name: 'og:description', content: this.description },
-      { name: 'og:image', content: this.image },
-      { name: 'og:type', content: 'website' },
-
-      // LinkedIn
-      { property: 'og:title', content: this.title },
-      { property: 'og:url', content: this.url },
-      { property: 'og:description', content: this.description },
-      { property: 'og:image', content: this.image },
-
-      { name: 'twitter:card', content: 'summary' },
-      { name: 'twitter:site', content: '@lornasw93' },
-      { name: 'twitter:creator', content: '@lornasw93' },
-      { name: 'twitter:title', content: this.title },
-      { name: 'twitter:description', content: this.description },
-      { name: 'twitter:image', content: this.image }
-    ]);
+    this.metaService.updateTag({ name: 'og:url', content: this.url });
   }
 }
