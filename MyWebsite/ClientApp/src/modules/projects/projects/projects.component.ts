@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faMedkit, faChartLine, faMapMarkedAlt, faUser, faRocket, faHammer } from '@fortawesome/free-solid-svg-icons';
+import { faMedkit, faChartLine, faMapMarkedAlt, faUser, faRocket, faHammer, faAt } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from "../../../core/meta-data.service";
 import { Title, Meta } from "@angular/platform-browser";
 
@@ -14,6 +14,7 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   faUser = faUser;
   faRocket = faRocket;
   faHammer = faHammer;
+  faAt = faAt;
 
   epilepsyDiaryInfo = 'Keeping track of your epilepsy i.e. seizure info, medications, doctor appointments etc.';
   epilepsyDiaryTags = ['Angular 9', '.NET Core', 'Swagger'];
@@ -27,13 +28,16 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   mikesFlooringInfo = "Complimenting Mike's Facebook group, he wanted a website to ultimately showcase the services he provides.";
   mikesFlooringTags = ['Angular 9', 'Firebase', 'SEO'];
 
+  emailServiceInfo = "Communication service to create and send emails.";
+  emailServiceTags = ['Node.js', 'SMTP'];
+
   constructor(titleService: Title,
     metaService: Meta
   ) {
     super(titleService, metaService);
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.updateTags('Project', 'project');
   }
 }

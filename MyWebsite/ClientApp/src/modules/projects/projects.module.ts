@@ -8,6 +8,7 @@ import { DevOpStatsComponent } from './devop-stats/devop-stats.component';
 import { PROJECT_ROUTES } from './projects.routing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.component";
+import { EmailServiceComponent } from "./email-service/email-service.component";
 
 @NgModule({
   declarations: [
@@ -15,10 +16,14 @@ import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.componen
     CsvToMapComponent,
     EpilepsyDiaryComponent,
     DevOpStatsComponent,
-    MikesFlooringComponent
+    MikesFlooringComponent,
+    EmailServiceComponent
   ],
-  imports: [FontAwesomeModule,
-    CommonModule, RouterModule.forChild(PROJECT_ROUTES)],
+  imports: [
+    FontAwesomeModule,
+    CommonModule,
+    RouterModule.forChild(PROJECT_ROUTES)
+  ],
   exports: [RouterModule]
 })
 export class ProjectsModule { }

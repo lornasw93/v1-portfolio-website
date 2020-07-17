@@ -1,7 +1,7 @@
 <section id="projects">
   <div class="container" data-aos="fade-up">
     <div class="section-title">
-      <h2>Projects</h2>
+      <h1>Projects</h1>
       <p>
         When I hear 'side projects', I think of: buying domains and not using them, half-finished projects and lack of free time.
         In general, it's known that most people will have some sort of project graveyard - stuff that has been started but never finished.
@@ -68,6 +68,18 @@
           <p>{{mikesFlooringInfo}}</p>
           <ul class="tags">
             <li *ngFor="let tag of mikesFlooringTags"><span>{{tag}}</span></li>
+          </ul>
+        </a>
+      </div>
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
+        <a [routerLink]="'/projects/email-service'" class="icon-box" onclick="clicky.goal('Click - Projects - Email Service');">
+          <div class="icon">
+            <fa-icon [icon]="faAt" size="6x"></fa-icon>
+          </div>
+          <h4>Email Service</h4>
+          <p>{{emailServiceInfo}}</p>
+          <ul class="tags">
+            <li *ngFor="let tag of emailServiceTags"><span>{{tag}}</span></li>
           </ul>
         </a>
       </div>
