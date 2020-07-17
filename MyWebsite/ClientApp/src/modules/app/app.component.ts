@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core'; 
+import { Component, OnInit } from '@angular/core';
 import { MetaDataService } from "../../core/meta-data.service";
 import { Title, Meta } from "@angular/platform-browser";
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -15,5 +16,7 @@ export class AppComponent extends MetaDataService implements OnInit {
 
   ngOnInit() {
     this.addInitialTags();
+
+    AOS.init();
   }
 }
