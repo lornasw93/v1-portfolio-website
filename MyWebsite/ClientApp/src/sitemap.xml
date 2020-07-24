@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://lorna.dev</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/about</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/tech</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/desk</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/contact</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/projects</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/projects/devop-stats</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/projects/csv-to-map</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/projects/epilepsy-diary</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/projects/mikes-flooring</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/projects/email-service</loc>
+  </url>
+</urlset>

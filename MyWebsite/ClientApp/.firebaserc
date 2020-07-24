@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-website-cbec6": {
+      "hosting": {
+        "MyWebsite": [
+          "my-website-cbec6"
+        ]
+      }
+    }
+  }
+}

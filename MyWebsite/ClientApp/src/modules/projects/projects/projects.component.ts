@@ -28,8 +28,8 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   mikesFlooringInfo = "Complimenting Mike's Facebook group, he wanted a website to ultimately showcase the services he provides.";
   mikesFlooringTags = ['Angular 9', 'Firebase', 'SEO'];
 
-  emailServiceInfo = "Communication service to create and send emails.";
-  emailServiceTags = ['Node.js', 'SMTP'];
+  emailServiceInfo = "Acting as a communication micro-service, the Node.js project sends emails (so far).";
+  emailServiceTags = ['Node.js', 'Firebase', 'Cloud Functions', 'Nodemailer', 'SMTP'];
 
   constructor(titleService: Title,
     metaService: Meta

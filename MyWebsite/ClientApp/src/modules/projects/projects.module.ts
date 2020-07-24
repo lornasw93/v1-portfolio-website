@@ -17,7 +17,8 @@ import { EmailServiceComponent } from "./email-service/email-service.component";
     EpilepsyDiaryComponent,
     DevOpStatsComponent,
     MikesFlooringComponent,
-    EmailServiceComponent
+    EmailServiceComponent,
+
   ],
   imports: [
     FontAwesomeModule,

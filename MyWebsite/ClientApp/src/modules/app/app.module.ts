@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'; 
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { ProjectsModule } from "../projects/projects.module";
@@ -16,6 +16,7 @@ import { NavbarComponent } from "../shared/navbar/navbar.component";
 import { FooterComponent } from "../shared/footer/footer.component";
 import { AboutComponent } from "../about/about.component";
 import { DeskComponent } from "../desk/desk.component";
+import { PageNotFoundComponent } from "../error/page-not-found/page-not-found.component";
 
 @NgModule({
   imports: [
@@ -27,7 +28,7 @@ import { DeskComponent } from "../desk/desk.component";
     FontAwesomeModule,
     ReactiveFormsModule,
     NgbModule,
-    ProjectsModule, 
+    ProjectsModule
   ],
   exports: [],
   declarations: [
@@ -37,7 +38,8 @@ import { DeskComponent } from "../desk/desk.component";
     HomeComponent,
     AboutComponent,
     DeskComponent,
-    ContactComponent
+    ContactComponent,
+    PageNotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

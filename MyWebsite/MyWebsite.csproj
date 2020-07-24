@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ClientApp\src\core\models\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
 
