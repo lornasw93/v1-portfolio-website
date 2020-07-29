@@ -11,16 +11,16 @@ import { AngularFireFunctionsModule } from '@angular/fire/functions';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { AppComponent } from './app.component';
-import { ProjectsModule } from "../projects/projects.module";
-import { HomeComponent } from "../home/home.component";
-import { ContactComponent } from "../contact/contact.component";
-import { APP_ROUTES } from "./app.routing";
-import { NavbarComponent } from "../shared/navbar/navbar.component";
-import { FooterComponent } from "../shared/footer/footer.component";
-import { AboutComponent } from "../about/about.component";
-import { DeskComponent } from "../desk/desk.component";
-import { PageNotFoundComponent } from "../error/page-not-found/page-not-found.component";
-import { environment } from "../../environments/environment"; 
+import { ProjectsModule } from './projects/projects.module';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
+import { APP_ROUTES } from './app.routing';
+import { environment } from 'src/environments/environment';
+import { FooterComponent } from './shared/footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { DeskComponent } from './desk/desk.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -46,7 +46,7 @@ import { environment } from "../../environments/environment";
     AboutComponent,
     DeskComponent,
     ContactComponent,
-    PageNotFoundComponent, 
+    PageNotFoundComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

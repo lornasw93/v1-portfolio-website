@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { MetaDataService } from "../../core/meta-data.service";
-import { Title, Meta } from "@angular/platform-browser";
+import { MetaDataService } from 'src/core/meta-data.service';
+import { Title, Meta } from '@angular/platform-browser';
 import { AngularFireFunctions } from '@angular/fire/functions';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Component({

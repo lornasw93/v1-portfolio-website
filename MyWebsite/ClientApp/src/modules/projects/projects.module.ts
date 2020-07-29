@@ -7,9 +7,9 @@ import { RouterModule } from '@angular/router';
 import { DevOpStatsComponent } from './devop-stats/devop-stats.component';
 import { PROJECT_ROUTES } from './projects.routing';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.component";
-import { EmailServiceComponent } from "./email-service/email-service.component";
-import { ProjectStatusComponent } from "../shared/project-status/project-status.component";
+import { MikesFlooringComponent } from './mikes-flooring/mikes-flooring.component';
+import { EmailServiceComponent } from './email-service/email-service.component';
+import { ProjectStatusComponent } from '../shared/project-status/project-status.component';
 
 @NgModule({
   declarations: [

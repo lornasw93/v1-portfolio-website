@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from "../home/home.component";
-import { ContactComponent } from "../contact/contact.component";
-import { AboutComponent } from "../about/about.component";
-import { TechComponent } from "../tech/tech.component";
-import { DeskComponent } from "../desk/desk.component";
-import { PageNotFoundComponent } from "../error/page-not-found/page-not-found.component";
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
+import { TechComponent } from './tech/tech.component';
+import { DeskComponent } from './desk/desk.component';
+import { ContactComponent } from './contact/contact.component';
+import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 
 export const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -16,7 +16,7 @@ export const APP_ROUTES: Routes = [
   { path: 'contact', component: ContactComponent },
   {
     path: 'projects',
-    loadChildren: () => import(`../../modules/projects/projects.module`).then(m => m.ProjectsModule)
+    loadChildren: () => import(`../modules/projects/projects.module`).then(m => m.ProjectsModule)
   },
   { path: '**', component: PageNotFoundComponent }
 ];

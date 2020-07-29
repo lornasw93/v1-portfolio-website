@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MetaDataService } from "../../../core/meta-data.service";
-import { Title, Meta } from "@angular/platform-browser";
+import { MetaDataService } from 'src/core/meta-data.service';
+import { Title, Meta } from '@angular/platform-browser';
 import { faGithubAlt, faDev } from '@fortawesome/free-brands-svg-icons';
 
 @Component({

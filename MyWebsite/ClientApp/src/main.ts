@@ -5,7 +5,7 @@ import '@angular/localize/init';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'; 
 import { environment } from './environments/environment';
-import { AppModule } from "./modules/app/app.module";
+import { AppModule } from "./modules/app.module";
 
 export function getBaseUrl() {
   return document.getElementsByTagName('base')[0].href;

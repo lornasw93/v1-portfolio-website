@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
-import { ProjectsComponent } from "./projects/projects.component";
-import { CsvToMapComponent } from "./csv-to-map/csv-to-map.component";
-import { EpilepsyDiaryComponent } from "./epilepsy-diary/epilepsy-diary.component";
-import { DevOpStatsComponent } from "./devop-stats/devop-stats.component";
-import { MikesFlooringComponent } from "./mikes-flooring/mikes-flooring.component";
-import { EmailServiceComponent } from "./email-service/email-service.component"; 
+import { ProjectsComponent } from './projects/projects.component';
+import { DevOpStatsComponent } from './devop-stats/devop-stats.component';
+import { CsvToMapComponent } from './csv-to-map/csv-to-map.component';
+import { EpilepsyDiaryComponent } from './epilepsy-diary/epilepsy-diary.component';
+import { MikesFlooringComponent } from './mikes-flooring/mikes-flooring.component';
+import { EmailServiceComponent } from './email-service/email-service.component';
 
 export const PROJECT_ROUTES: Routes = [
   { path: 'projects', component: ProjectsComponent },
@@ -12,5 +12,5 @@ export const PROJECT_ROUTES: Routes = [
   { path: 'csv-to-map', component: CsvToMapComponent },
   { path: 'epilepsy-diary', component: EpilepsyDiaryComponent },
   { path: 'mikes-flooring', component: MikesFlooringComponent },
-  { path: 'email-service', component: EmailServiceComponent } 
+  { path: 'email-service', component: EmailServiceComponent }
 ];

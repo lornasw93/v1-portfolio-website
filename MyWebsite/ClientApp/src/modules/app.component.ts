@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MetaDataService } from "../../core/meta-data.service";
-import { Title, Meta } from "@angular/platform-browser";
 import * as AOS from 'aos';
+import { MetaDataService } from 'src/core/meta-data.service';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
