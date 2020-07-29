@@ -1,48 +1,17 @@
 <section>
   <div class="container" data-aos="fade-up">
     <div class="section-title">
-      <h1>DevOp Stats</h1>
-      <div class="row">
-        <div class="col-sm-2">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">FE</h4>
-              <p class="card-text">Angular</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">BE</h4>
-              <p class="card-text">.NET Core, REST API, Swagger</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">Hosting</h4>
-              <p class="card-text">Azure Web App Service</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">Status</h4>
-              <p class="card-text">Ongoing - 70% done</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h1>DevOp Stats</h1> 
     </div>
+
+    <app-project-status frontend="Angular 9"
+                        backend=".NET Core, REST API, Swagger"
+                        hosting="FE: Firebase, BE: Azure WAS"
+                        status="Ongoing - 70% done"></app-project-status>
+
     <div class="row">
       <div class="col">
-        <strong>Please note I plan to update the project pages frequently with more info.</strong>
-        <p><i>I will make the repo and live URL visible on this page once I've completed the project.</i></p>
-
-        <h4>Prerequisites</h4>
+        <h2>Prerequisites</h2>
         <ul>
           <li>Token key generated from Azure DevOps</li>
         </ul>

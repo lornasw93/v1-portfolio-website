@@ -6,6 +6,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireFunctionsModule } from '@angular/fire/functions';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { AppComponent } from './app.component';
 import { ProjectsModule } from "../projects/projects.module";
@@ -17,6 +20,7 @@ import { FooterComponent } from "../shared/footer/footer.component";
 import { AboutComponent } from "../about/about.component";
 import { DeskComponent } from "../desk/desk.component";
 import { PageNotFoundComponent } from "../error/page-not-found/page-not-found.component";
+import { environment } from "../../environments/environment"; 
 
 @NgModule({
   imports: [
@@ -28,7 +32,10 @@ import { PageNotFoundComponent } from "../error/page-not-found/page-not-found.co
     FontAwesomeModule,
     ReactiveFormsModule,
     NgbModule,
-    ProjectsModule
+    ProjectsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireFunctionsModule,
+    SweetAlert2Module.forRoot()
   ],
   exports: [],
   declarations: [
@@ -39,7 +46,7 @@ import { PageNotFoundComponent } from "../error/page-not-found/page-not-found.co
     AboutComponent,
     DeskComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent, 
   ],
   providers: [],
   bootstrap: [AppComponent]

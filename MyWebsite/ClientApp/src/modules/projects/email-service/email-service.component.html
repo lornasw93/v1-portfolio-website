@@ -2,38 +2,15 @@
   <div class="container" data-aos="fade-up">
     <div class="section-title">
       <h1>Email Service</h1>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">BE</h4>
-              <p class="card-text">Node.js, Firebase Cloud Functions</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">Hosting</h4>
-              <p class="card-text">Firebase Hosting</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">Status</h4>
-              <p class="card-text">Finished v1, ongoing for v2</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+
+    <app-project-status frontend="N/A"
+                        backend="Node.js, Firebase Cloud Functions"
+                        hosting="Firebase"
+                        status="Finished v1, ongoing for v2"></app-project-status>
+
     <div class="row">
       <div class="col">
-        <strong>Please note I plan to update the project pages frequently with more info.</strong>
-        <p><i>I will make the repo and live URL visible on this page once I've completed the project.</i></p>
-
         <a href="https://github.com/lornasw93/email-service" target="_blank" onclick="clicky.goal('Click - Projects - Email Service - GitHub');">
           <fa-icon [icon]="faGithubAlt"></fa-icon> Repo
         </a>
@@ -41,7 +18,6 @@
         <a href="https://dev.to/lornasw93/using-node-js-firebase-cloud-functions-and-nodemailer-smtp-to-send-an-email-51j8" target="_blank" onclick="clicky.goal('Click - Projects - Email Service - Blog Post');">
           <fa-icon [icon]="faDev"></fa-icon> Blog post
         </a>
-
         <p></p>
       </div>
     </div>

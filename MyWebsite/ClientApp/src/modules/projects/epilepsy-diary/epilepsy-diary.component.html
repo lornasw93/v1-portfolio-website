@@ -2,51 +2,19 @@
   <div class="container" data-aos="fade-up">
     <div class="section-title">
       <h1>Epilepsy Diary</h1>
-      <div class="row">
-        <div class="col-sm-2">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">FE</h4>
-              <p class="card-text">Angular</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">BE</h4>
-              <p class="card-text">.NET Core, REST API, Swagger</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">Hosting</h4>
-              <p class="card-text">FE: Firebase Hosting</p>
-              <p class="card-text">BE: Azure Web App Service</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-              <h4 class="card-title">Status</h4>
-              <p class="card-text">Ongoing - 10% done</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
+
+    <app-project-status frontend="Angular 9"
+                        backend=".NET Core, REST API, Swagger"
+                        hosting="FE: Firebase, BE: Azure WAS"
+                        status="Ongoing - 10% done"></app-project-status>
+
     <div class="row">
       <div class="col">
-        <strong>Please note I plan to update the project pages frequently with more info.</strong>
-        <p><i>I will make the repo and live URL visible on this page once I've completed the project.</i></p>
-
-        <h4>Overview</h4>
+        <h2>Overview</h2>
         <p>Keeping track of your epilepsy conveniently.</p>
 
-        <h4>Background</h4>
+        <h2>Background</h2>
         <p>
           My older brother has been epileptic since 2012.
           To help my mum keep track of his seizures, she downloaded a mobile app and used this to record basic information i.e. dates and duration.
@@ -60,7 +28,7 @@
           Post first release, my hope is to expand the user base and introduce more functionality.
         </p>
 
-        <h4>Use cases</h4>
+        <h2>Use cases</h2>
         <ul>
           <li>A user is associated with a person and role</li>
           <li>A person contains properties such as forename, surname and email</li>
@@ -74,13 +42,13 @@
           <li>Medication is associated with a prescription and time of day i.e. morning and evening. Has properties such as name, dosage, colour, brand, start date, next refill date and end date. Can have many medications to a prescription. Colour is visually useful when dealing with multiple medications</li>
         </ul>
 
-        <h4>Before seizure</h4>
+        <h2>Before seizure</h2>
         <ul>
           <li>Activity i.e. listening to music</li>
           <li>Behaviour i.e. staring into space, absent, slurring words, nauseous</li>
         </ul>
 
-        <h4>After seizure</h4>
+        <h2>After seizure</h2>
         <ul>
           <li>Type of seizure</li>
           <li>Any injuries sustained? Yes/No</li>
@@ -90,7 +58,7 @@
           <li>Hospital visit? Yes/No</li>
         </ul>
 
-        <img src="/assets/projects/epilepsy-diary/database.png"/>
+        <img src="/assets/projects/epilepsy-diary/database.png" />
       </div>
     </div>
   </div>

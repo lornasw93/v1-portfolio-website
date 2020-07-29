@@ -17,7 +17,7 @@ export class HomeComponent extends MetaDataService implements OnInit {
   }
 
   ngOnInit() {
-    this.updateHomeTag();
+    this.updateTags(null, null);
   }
 }
 

@@ -31,6 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@ng-bootstrap/ng-bootstrap": "^6.1.0",
     "@nguniversal/module-map-ngfactory-loader": "^8.2.6",
+    "@sweetalert2/ngx-sweetalert2": "^8.1.1",
     "aos": "^2.3.4",
     "aspnet-prerendering": "^3.0.1",
     "bootstrap": "^4.5.0",
@@ -46,6 +47,7 @@
     "prerender-node": "^3.2.5",
     "rxjs": "^6.6.0",
     "rxjs-observable": "0.0.7",
+    "sweetalert2": "^9.17.1",
     "tslib": "^2.0.0",
     "uninstall": "0.0.0",
     "zone.js": "~0.10.3"

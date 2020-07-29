@@ -10,30 +10,33 @@ export abstract class MetaDataService {
   ) {
   }
 
-  title = 'Lorna Watson | Software Developer';
-  description = 'Lorna is a software developer based in Leeds, UK with a passion for programming, spreadsheets and data analytics.';
-  image = 'https://lorna.dev/assets/static/thumbnail.jpeg';
   url = 'https://lorna.dev';
 
-  // per page that isn't the homepage
-  partTitle = ' | Lorna Watson';
-
-  // these are tags that will change per page change
   updateTags(tag, partUrl) {
-    const pageTitle = tag + this.partTitle;
+    if (tag == null && partUrl == null) {
+      const title = 'Lorna Watson | Software Developer';
 
-    // title
-    this.titleService.setTitle(pageTitle);
-    this.metaService.updateTag({ name: 'og:title', content: pageTitle });
-    this.metaService.updateTag({ name: 'twitter:title', content: pageTitle });
+      this.updateTitle(title);
+      this.updateUrl(this.url);
+    } else {
+      const endTitle = ' | Lorna Watson';
+      const pageTitle = tag + endTitle;
 
-    // url
-    this.metaService.updateTag({ name: 'og:url', content: this.url + '/' + partUrl });
-    this.metaService.updateTag({ property: 'twitter:url', content: this.url + '/' + partUrl });
+      this.updateTitle(pageTitle);
+      this.updateUrl(this.url + '/' + partUrl);
+    }
   }
 
-  updateHomeTag() {
-    this.titleService.setTitle(this.title);
-    this.metaService.updateTag({ name: 'og:url', content: this.url });
+  private updateTitle(title) {
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'og:title', content: title });
+    this.metaService.updateTag({ name: 'twitter:title', content: title });
+    this.metaService.updateTag({ name: 'title', property: 'og:title', content: title });
+
+  }
+
+  private updateUrl(url) {
+    this.metaService.updateTag({ name: 'og:url', content: url });
+    this.metaService.updateTag({ property: 'twitter:url', content: url });
   }
 }
