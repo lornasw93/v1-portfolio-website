@@ -21,6 +21,7 @@ import { HomeComponent } from './home/home.component';
 import { DeskComponent } from './desk/desk.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   imports: [
@@ -33,8 +34,6 @@ import { PageNotFoundComponent } from './error/page-not-found/page-not-found.com
     ReactiveFormsModule,
     NgbModule,
     ProjectsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireFunctionsModule,
     SweetAlert2Module.forRoot()
   ],
   exports: [],
@@ -46,7 +45,8 @@ import { PageNotFoundComponent } from './error/page-not-found/page-not-found.com
     AboutComponent,
     DeskComponent,
     ContactComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BlogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

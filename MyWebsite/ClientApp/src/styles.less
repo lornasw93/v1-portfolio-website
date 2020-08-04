@@ -248,9 +248,8 @@ ul.tags {
     text-transform: uppercase !important;
     white-space: nowrap;
     padding: 3px 5px;
-    background-color: @pale-red;
-    color: #fff;
-    border: none;
+    border: 1px solid @dark-grey;
+    color: @dark-grey;
   }
 }
 
@@ -343,11 +342,10 @@ section#about, section#desk {
 section#projects {
   .icon-box {
     text-align: center;
-    padding: 70px 20px 80px 20px;
+    //padding: 70px 20px 80px 20px;
     transition: all ease-in-out 0.3s;
     background: #fff;
-
-    .icon {
+    /*.icon {
       margin: 0 auto;
       width: 100px;
       height: 100px;
@@ -362,8 +360,7 @@ section#projects {
         position: relative;
         color: @pale-red;
       }
-    }
-
+    }*/
     h4 {
       font-weight: 600;
       margin: 10px 0 15px 0;
@@ -516,10 +513,6 @@ section#contact {
     text-align: center;
   }
 
-  #hero .container, #hero .container-fluid {
-    //padding-top: 68px;
-  }
-
   #hero .hero-img {
     text-align: center;
   }
@@ -552,5 +545,75 @@ section#contact {
 @media (max-width: 575px) {
   #hero .hero-img img {
     width: 80%;
+  }
+}
+
+.band {
+  width: 90%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media only screen and (min-width: 500px) {
+  .band {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .band {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  min-height: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+
+  article {
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  p {
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  a, span.updated {
+    font-size: 11px;
+    font-weight: bold;
+    color: #828282;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+  }
+
+  a {
+    color: @pale-red;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

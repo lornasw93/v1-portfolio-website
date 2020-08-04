@@ -23,66 +23,36 @@
       </p>
     </div>
     <div class="row">
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-        <a [routerLink]="'/projects/epilepsy-diary'" class="icon-box" onclick="clicky.goal('Click - Projects - Epilepsy Diary');">
-          <div class="icon">
-            <fa-icon [icon]="faMedkit" size="6x"></fa-icon>
-          </div>
-          <h4>Epilepsy Diary</h4>
-          <p>{{epilepsyDiaryInfo}}</p>
-          <ul class="tags">
-            <li *ngFor="let tag of epilepsyDiaryTags"><span>{{tag}}</span></li>
-          </ul>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="150">
-        <a [routerLink]="'/projects/devop-stats'" class="icon-box" onclick="clicky.goal('Click - Projects - DevOp Stats');">
-          <div class="icon">
-            <fa-icon [icon]="faChartLine" size="6x"></fa-icon>
-          </div>
-          <h4>DevOp Stats</h4>
-          <p>{{devopStatsInfo}}</p>
-          <ul class="tags">
-            <li *ngFor="let tag of devopStatsTags"><span>{{tag}}</span></li>
-          </ul>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
-        <a [routerLink]="'/projects/csv-to-map'" class="icon-box" onclick="clicky.goal('Click - Projects - CSV to Map');">
-          <div class="icon">
-            <fa-icon [icon]="faMapMarkedAlt" size="6x"></fa-icon>
-          </div>
-          <h4>Csv to Map</h4>
-          <p>{{csvToMapInfo}}</p>
-          <ul class="tags">
-            <li *ngFor="let tag of csvToMapTags"><span>{{tag}}</span></li>
-          </ul>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="250">
-        <a [routerLink]="'/projects/mikes-flooring'" class="icon-box" onclick="clicky.goal('Click - Projects - Mike\'s Flooring');">
-          <div class="icon">
-            <fa-icon [icon]="faHammer" size="6x"></fa-icon>
-          </div>
-          <h4>Mike's Flooring</h4>
-          <p>{{mikesFlooringInfo}}</p>
-          <ul class="tags">
-            <li *ngFor="let tag of mikesFlooringTags"><span>{{tag}}</span></li>
-          </ul>
-        </a>
-      </div>
-      <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-        <a [routerLink]="'/projects/email-service'" class="icon-box" onclick="clicky.goal('Click - Projects - Email Service');">
-          <div class="icon">
-            <fa-icon [icon]="faAt" size="6x"></fa-icon>
-          </div>
-          <h4>Email Service</h4>
-          <p>{{emailServiceInfo}}</p>
-          <ul class="tags">
-            <li *ngFor="let tag of emailServiceTags"><span>{{tag}}</span></li>
-          </ul>
-        </a>
-      </div>
-    </div>
-  </div>
+      <div class="band">
+        <div *ngFor="let repo of repos" data-aos="zoom-in" data-aos-delay="100"> 
+            <a [routerLink]="'/projects/epilepsy-diary'" class="icon-box card" onclick="clicky.goal('Click - Projects - Epilepsy Diary');">
+              <article>
+                <h4>{{repo.name}}</h4>
+                <p>{{repo.description}}</p>
+                <ul class="tags">
+                  <li *ngFor="let tag of repo.topics">
+                    <span>{{tag}}</span>
+                  </li>
+                </ul>
+                <div class="row">
+                  <div class="col-6">
+                    <a href="{{repo.url}}" target="_blank">
+                      <fa-icon [icon]="faGithub"></fa-icon> Repo
+                    </a>
+                  </div>
+                  <div class="col-6">
+                    <div *ngIf="repo.homepage!=''">
+                      <a href="{{repo.homepage}}" target="_blank">
+                        <fa-icon [icon]="faGlobe"></fa-icon> Website
+                      </a>
+                    </div>
+                  </div>
+                </div> 
+                <span class="updated">Updated {{repo.updated_at | date:short}}</span>
+              </article>
+            </a> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
 </section>
