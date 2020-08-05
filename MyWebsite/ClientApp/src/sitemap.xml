@@ -7,13 +7,13 @@
     <loc>https://lorna.dev/about</loc>
   </url>
   <url>
-    <loc>https://lorna.dev/tech</loc>
-  </url>
-  <url>
     <loc>https://lorna.dev/desk</loc>
   </url>
   <url>
-    <loc>https://lorna.dev/contact</loc>
+    <loc>https://lorna.dev/tech</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/blog</loc>
   </url>
   <url>
     <loc>https://lorna.dev/projects</loc>
@@ -32,5 +32,8 @@
   </url>
   <url>
     <loc>https://lorna.dev/projects/email-service</loc>
+  </url>
+  <url>
+    <loc>https://lorna.dev/contact</loc>
   </url>
 </urlset>
