@@ -14,31 +14,29 @@
       </p> <br>
       <p><strong>I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯</strong></p>
     </div>
-    <div class="row">
-      <div class="band">
-        <div *ngFor="let post of posts; let i = index">
-          <div class="icon-box card">
-            <article>
-              <div *ngIf="post.cover_image!=''">
-                <img src="{{post.cover_image}}" class="img-fluid" />
+    <div class="row band">
+      <div *ngFor="let post of posts; let i = index">
+        <div class="icon-box card">
+          <article>
+            <div *ngIf="post.cover_image!=''">
+              <img src="{{post.cover_image}}" class="img-fluid" />
+            </div>
+            <h4>{{post.title}}</h4>
+            <p>{{post.description}}</p>
+            <ul class="tags">
+              <li *ngFor="let tag of post.tag_list">
+                <span>{{tag}}</span>
+              </li>
+            </ul>
+            <div class="row">
+              <div class="col-6">
+                <a href="{{post.url}}" target="_blank">
+                  <fa-icon [icon]="faDev"></fa-icon> Post
+                </a>
               </div>
-              <h4>{{post.title}}</h4>
-              <p>{{post.description}}</p>
-              <ul class="tags">
-                <li *ngFor="let tag of post.tag_list">
-                  <span>{{tag}}</span>
-                </li>
-              </ul>
-              <div class="row">
-                <div class="col-6">
-                  <a href="{{post.url}}" target="_blank">
-                    <fa-icon [icon]="faDev"></fa-icon> Post
-                  </a>
-                </div>
-              </div>
-              <span class="updated">Created {{post.created_at | date:short}}</span>
-            </article>
-          </div>
+            </div>
+            <span class="updated">Created {{post.created_at | date:short}}</span>
+          </article>
         </div>
       </div>
     </div>
