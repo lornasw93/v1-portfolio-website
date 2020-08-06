@@ -3,16 +3,21 @@
     <div class="section-title">
       <h1>Blog</h1>
       <p>
-
-
-
-        Most recent blog shows first and oldest last.
-      </p>
+        In my own way, blogging as a developer is a way of expressing myself on the web whether it be because of finding something interesting,
+        solving a problem or in general just having that space to write my thoughts down. It's also pretty useful for when inevitably I forget
+        bits I do on a reg like setting up services and new project packages to install. <a href="https://dev.to">DEV.to</a> has given me that
+        space to free my mind and be creative, accountability in a way and may be even by helping a reader with a problem I solved - even better.
+      </p><br>
+      <p>
+        I write about anything (tech wise) that I think is both interesting and useful, including experiences. I've recently started to write
+        blogs very often
+      </p> <br>
+      <p><strong>I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯</strong></p>
     </div>
     <div class="row">
       <div class="band">
         <div *ngFor="let post of posts; let i = index">
-          <a [routerLink]="'/projects/epilepsy-diary'" class="icon-box card">
+          <div class="icon-box card">
             <article>
               <div *ngIf="post.cover_image!=''">
                 <img src="{{post.cover_image}}" class="img-fluid" />
@@ -24,9 +29,6 @@
                   <span>{{tag}}</span>
                 </li>
               </ul>
-
-              <span><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}}</span>
-
               <div class="row">
                 <div class="col-6">
                   <a href="{{post.url}}" target="_blank">
@@ -36,7 +38,7 @@
               </div>
               <span class="updated">Created {{post.created_at | date:short}}</span>
             </article>
-          </a>
+          </div>
         </div>
       </div>
     </div>

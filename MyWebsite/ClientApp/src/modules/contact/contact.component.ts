@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder } from '@angular/forms';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from 'src/core/meta-data.service';
@@ -42,18 +42,10 @@ export class ContactComponent extends MetaDataService implements OnInit {
 
     this.service.sendEmail(data).subscribe(
       res => {
-        Swal.fire(
-          'Thanks, ' + this.contactForm.value.name + ' 😀',
-          'Your request has been sent.',
-          'success'
-        );
+        Swal.fire('Thanks, ' + this.contactForm.value.name + ' 😀', 'Your request has been sent.', 'success');
       },
       err => {
-        Swal.fire(
-          'Oops!',
-          'Something has gone wrong, please send your request via email to hello@lorna.dev.',
-          'error'
-        );
+        Swal.fire('Oops!', 'Something has gone wrong, please send your request via email to hello@lorna.dev.', 'error');
       }
     );
   };
