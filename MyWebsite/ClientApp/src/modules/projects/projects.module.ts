@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MikesFlooringComponent } from './mikes-flooring/mikes-flooring.component';
 import { EmailServiceComponent } from './email-service/email-service.component';
 import { ProjectStatusComponent } from '../shared/project-status/project-status.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ProjectStatusComponent } from '../shared/project-status/project-status.
     DevOpStatsComponent,
     MikesFlooringComponent,
     EmailServiceComponent,
-    ProjectStatusComponent
+    ProjectStatusComponent,
+    ProjectComponent
   ],
   imports: [
     FontAwesomeModule,

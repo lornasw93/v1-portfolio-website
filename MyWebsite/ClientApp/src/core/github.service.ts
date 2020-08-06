@@ -6,13 +6,15 @@ import { BaseApiService } from "./base.api.service";
   providedIn: 'root'
 })
 export class GitHubService extends BaseApiService<object> {
-  resourceUrl = 'repos';
-
   constructor(httpClient: HttpClient) {
     super(httpClient);
   }
 
   getRepos() {
-    return this.getList();
+    return this.getList('repos');
+  }
+
+  getReadme() {
+    return this.get('repo/readme/:name');
   }
 }

@@ -3,7 +3,10 @@
     <div class="section-title">
       <h1>Blog</h1>
       <p>
-        Some detail here
+
+
+
+        Most recent blog shows first and oldest last.
       </p>
     </div>
     <div class="row">
@@ -21,6 +24,9 @@
                   <span>{{tag}}</span>
                 </li>
               </ul>
+
+              <span><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}}</span>
+
               <div class="row">
                 <div class="col-6">
                   <a href="{{post.url}}" target="_blank">

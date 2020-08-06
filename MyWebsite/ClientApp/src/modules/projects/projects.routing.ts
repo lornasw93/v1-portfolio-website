@@ -1,16 +1,16 @@
 import { Routes } from '@angular/router';
-import { ProjectsComponent } from './projects/projects.component';
-import { DevOpStatsComponent } from './devop-stats/devop-stats.component';
-import { CsvToMapComponent } from './csv-to-map/csv-to-map.component';
-import { EpilepsyDiaryComponent } from './epilepsy-diary/epilepsy-diary.component';
-import { MikesFlooringComponent } from './mikes-flooring/mikes-flooring.component';
-import { EmailServiceComponent } from './email-service/email-service.component';
+import { ProjectsComponent } from './projects/projects.component'; 
+import { ProjectComponent } from './project/project.component';
 
 export const PROJECT_ROUTES: Routes = [
   { path: 'projects', component: ProjectsComponent },
-  { path: 'devop-stats', component: DevOpStatsComponent },
-  { path: 'csv-to-map', component: CsvToMapComponent },
-  { path: 'epilepsy-diary', component: EpilepsyDiaryComponent },
-  { path: 'mikes-flooring', component: MikesFlooringComponent },
-  { path: 'email-service', component: EmailServiceComponent }
+
+  { path: 'amk-deezer-api', component: ProjectComponent },
+  { path: 'api-the-musical-kind', component: ProjectComponent },
+  { path: 'email-service', component: ProjectComponent },
+  { path: 'mikes-flooring', component: ProjectComponent },
+  { path: 'my-apis', component: ProjectComponent },
+  { path: 'my-blogs-api', component: ProjectComponent },
+  { path: 'my-projects', component: ProjectComponent },
+  { path: 'my-website', component: ProjectComponent }
 ];

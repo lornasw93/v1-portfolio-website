@@ -4,7 +4,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from 'src/core/meta-data.service';
 import { Title, Meta } from '@angular/platform-browser';
 import Swal from 'sweetalert2';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { EmailService } from "../../core/email.service";
 
 @Component({
@@ -39,8 +39,8 @@ export class ContactComponent extends MetaDataService implements OnInit {
       email: this.contactForm.value.email,
       message: this.contactForm.value.message
     };
-     
-    this.service.send(data).subscribe(
+
+    this.service.sendEmail(data).subscribe(
       res => {
         Swal.fire(
           'Thanks, ' + this.contactForm.value.name + ' 😀',

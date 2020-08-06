@@ -39,9 +39,9 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
         var o = [];
 
         res.forEach(value => {
-          if (!value.name.includes('.backend') && !value.name.includes('.frontend')) {
+          //if (!value.name.includes('.backend') && !value.name.includes('.frontend')) {
             o.push(value);
-          }
+          //}
         });
 
         this.repos = o;

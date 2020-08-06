@@ -6,13 +6,11 @@ import { BaseApiService } from './base.api.service';
   providedIn: 'root'
 })
 export class EmailService extends BaseApiService<object> {
-  resourceUrl = 'contactEmail';
-
   constructor(httpClient: HttpClient) {
     super(httpClient);
   }
 
-  send(params) {
-    return this.post(params);
+  sendEmail(params) {
+    return this.post(params, 'email/-my-website/contact');
   }
 }

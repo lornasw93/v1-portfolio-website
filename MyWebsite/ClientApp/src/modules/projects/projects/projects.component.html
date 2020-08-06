@@ -17,15 +17,11 @@
         Granted at times it can feel pretty overwhelming where I have felt I have too many things to learn - there is just so much out there.
         But that's also a good thing: everyday is different, constantly new tech coming out, new ways of doing things and better resources.
       </p>
-      <br>
-      <p>
-        One of my personal short-term goals is to complete at least one of the below projects - also to note I will update the content of each project page when I can.
-      </p>
     </div>
     <div class="row">
       <div class="band">
         <div *ngFor="let repo of repos" data-aos="zoom-in" data-aos-delay="100"> 
-            <a [routerLink]="'/projects/epilepsy-diary'" class="icon-box card" onclick="clicky.goal('Click - Projects - Epilepsy Diary');">
+            <div class="icon-box card">
               <article>
                 <h4>{{repo.name}}</h4>
                 <p>{{repo.description}}</p>
@@ -50,7 +46,7 @@
                 </div> 
                 <span class="updated">Updated {{repo.updated_at | date:short}}</span>
               </article>
-            </a> 
+            </div> 
         </div> 
       </div> 
     </div> 

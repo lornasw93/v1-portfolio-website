@@ -5,16 +5,11 @@
 
 @dark: #264653;
 @dark-rgba: rgba(38, 70, 83, 0.9);
-
 @pale-green: #2a9d8f;
 @pale-green-rgba: rgba(42, 157, 143, 0.9);
-
-/*@pale-yellow: #e9c46a;*/
 @pale-orange: #f4a261;
 @pale-red: #e76f51;
-
 @almost-white: #f9f8ff;
-
 @dark-grey: #444;
 
 *, *::before, *::after {
@@ -244,7 +239,7 @@ ul.tags {
   li {
     margin: 3px;
     border-radius: 3px;
-    font-size: .7rem;
+    font-size: .6rem;
     text-transform: uppercase !important;
     white-space: nowrap;
     padding: 3px 5px;
@@ -268,7 +263,18 @@ button, .btn {
   &:hover {
     background: @pale-orange;
     cursor: pointer;
-    color: #fff !important;
+    color: #fff;
+  }
+
+  &:disabled {
+    background: grey;
+    color: #fff;
+
+    &:hover {
+      background: grey;
+      color: #fff;
+      cursor: default;
+    }
   }
 }
 
@@ -549,7 +555,7 @@ section#contact {
 }
 
 .band {
-  width: 90%;
+  width: 100%;
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
@@ -601,7 +607,7 @@ section#contact {
   }
 
   a, span.updated {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     color: #828282;
     text-transform: uppercase;

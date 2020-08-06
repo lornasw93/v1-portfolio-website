@@ -6,13 +6,11 @@ import { BaseApiService } from "./base.api.service";
   providedIn: 'root'
 })
 export class BlogService extends BaseApiService<object> {
-  resourceUrl = 'blogPosts';
-
   constructor(httpClient: HttpClient) {
     super(httpClient);
   }
 
-  getPosts() { 
-    return this.getList();
+  getPosts() {
+    return this.getList('posts');
   }
 }
