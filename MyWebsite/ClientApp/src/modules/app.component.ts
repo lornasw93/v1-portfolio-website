@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
 import { MetaDataService } from 'src/core/meta-data.service';
 import { Title, Meta } from '@angular/platform-browser';
+import { Spinkit } from 'ng-http-loader';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,8 @@ export class AppComponent extends MetaDataService implements OnInit {
   ) {
     super(titleService, metaService);
   }
+
+  public spinkit = Spinkit; 
 
   ngOnInit() {
     this.updateTags(null, null);

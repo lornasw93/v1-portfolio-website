@@ -11,6 +11,6 @@ export class EmailService extends BaseApiService<object> {
   }
 
   sendEmail(params) {
-    return this.post(params, 'email/-my-website/contact');
+    return this.post(params, 'email/my-website/contact');
   }
 }

@@ -6,6 +6,7 @@ import { DeskComponent } from './desk/desk.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
 import { BlogComponent } from "./blog/blog.component";
+import { ProjectsComponent } from "./projects/projects.component";
 
 export const APP_ROUTES: Routes = [
   { path: '', component: HomeComponent },
@@ -16,9 +17,6 @@ export const APP_ROUTES: Routes = [
   { path: 'desk', component: DeskComponent }, 
   { path: 'blog', component: BlogComponent },
   { path: 'contact', component: ContactComponent },
-  {
-    path: 'projects',
-    loadChildren: () => import(`../modules/projects/projects.module`).then(m => m.ProjectsModule)
-  },
+  { path: 'projects', component: ProjectsComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

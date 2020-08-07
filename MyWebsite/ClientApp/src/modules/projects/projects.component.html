@@ -19,38 +19,44 @@
       </p>
       <br>
       <p><strong>I wrote a Node.js API service to get me a list of my public repos, you can see the result below. 🤯</strong></p>
-      </div>
+      <!--<br>
+  <ul class="tags">
+    <li *ngFor="let topic of topics">
+      <span>{{topic}}</span>
+    </li>
+  </ul>-->
+    </div>
     <div class="row">
       <div class="band">
-        <div *ngFor="let repo of repos" data-aos="zoom-in" data-aos-delay="100"> 
-            <div class="icon-box card">
-              <article>
-                <h4>{{repo.name}}</h4>
-                <p>{{repo.description}}</p>
-                <ul class="tags">
-                  <li *ngFor="let tag of repo.topics">
-                    <span>{{tag}}</span>
-                  </li>
-                </ul>
-                <div class="row">
-                  <div class="col-6">
-                    <a href="{{repo.html_url}}" target="_blank">
-                      <fa-icon [icon]="faGithub"></fa-icon> Repo
+        <div *ngFor="let repo of repos" data-aos="zoom-in" data-aos-delay="100">
+          <div class="icon-box card">
+            <article>
+              <h4>{{repo.name}}</h4>
+              <p>{{repo.description}}</p>
+              <ul class="tags">
+                <li *ngFor="let tag of repo.topics">
+                  <span>{{tag}}</span>
+                </li>
+              </ul>
+              <div class="row">
+                <div class="col-6">
+                  <a href="{{repo.html_url}}" target="_blank" onclick="clicky.goal(`Click - Projects - Repo - ${repo.name}`);">
+                    <fa-icon [icon]="faGithub"></fa-icon> Repo
+                  </a>
+                </div>
+                <div class="col-6">
+                  <div *ngIf="repo.homepage!=''">
+                    <a href="{{repo.homepage}}" target="_blank" onclick="clicky.goal(`Click - Projects - Website - ${repo.name}`);">
+                      <fa-icon [icon]="faGlobe"></fa-icon> Website
                     </a>
                   </div>
-                  <div class="col-6">
-                    <div *ngIf="repo.homepage!=''">
-                      <a href="{{repo.homepage}}" target="_blank">
-                        <fa-icon [icon]="faGlobe"></fa-icon> Website
-                      </a>
-                    </div>
-                  </div>
-                </div> 
-                <span class="updated">Updated {{repo.updated_at | date:short}}</span>
-              </article>
-            </div> 
-        </div> 
-      </div> 
-    </div> 
-  </div> 
+                </div>
+              </div>
+              <span class="updated">Updated {{repo.updated_at | date:short}}</span>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
