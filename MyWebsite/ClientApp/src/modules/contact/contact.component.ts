@@ -26,7 +26,7 @@ export class ContactComponent extends MetaDataService implements OnInit {
 
   contactForm = this.fb.group({
     name: ['', Validators.required],
-    email: ['', Validators.required],
+    email: ['', Validators.required], //TODO email format
     message: ['', Validators.required],
   });
 

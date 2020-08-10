@@ -20,4 +20,3 @@ export class HomeComponent extends MetaDataService implements OnInit {
     this.updateTags(null, null);
   }
 }
-
