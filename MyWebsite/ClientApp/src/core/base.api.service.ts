@@ -14,29 +14,29 @@ export abstract class BaseApiService<T> {
   getList(resourceUrl): Observable<T[]> {
     const to = `${this.baseUrl}/api/${resourceUrl}`;
 
-    console.log(`GET LIST: ${to}`);
+    //console.log(`GET LIST: ${to}`);
     return this.httpClient.get<T[]>(`${to}`);
   }
 
   get(resourceUrl): Observable<T> {
     const to = `${this.baseUrl}/api/${resourceUrl}`;
 
-    console.log(`GET: ${to}`);
+    //console.log(`GET: ${to}`);
     return this.httpClient.get<T>(`${to}`);
   }
 
   count(resourceUrl): Observable<T> {
     const to = `${this.baseUrl}/api/${resourceUrl}`;
 
-    console.log(`GET: ${to}`);
+    //console.log(`GET: ${to}`);
     return this.httpClient.get<T>(`${to}`);
   }
 
   
   post(params, resourceUrl): Observable<T> {
     const to = `${this.baseUrl}/api/${resourceUrl}`;
-    alert(to)
-    console.log(`POST: ${to}`);
+    
+    //console.log(`POST: ${to}`);
     return this.httpClient.post<T>(`${to}`, params);
   }
 }

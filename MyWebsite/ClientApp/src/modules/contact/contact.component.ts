@@ -45,8 +45,7 @@ export class ContactComponent extends MetaDataService implements OnInit {
       res => {
         Swal.fire('Thanks, ' + this.contactForm.value.name + ' 😀', 'Your request has been sent.', 'success');
       },
-      err => {
-        alert(err);
+      err => { 
         Swal.fire('Oops!', 'Something has gone wrong, please send your request via email to hello@lorna.dev.', 'error');
       }
     );

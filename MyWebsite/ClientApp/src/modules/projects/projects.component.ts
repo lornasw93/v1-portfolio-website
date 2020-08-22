@@ -49,7 +49,6 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
     this.githubService.getProjectCount().subscribe(
       (res: any) => {
         this.projectCount = res.count;
-        console.log(res.count);
       },
       err => {
         console.log(err);
