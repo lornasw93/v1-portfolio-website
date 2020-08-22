@@ -21,10 +21,15 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   }
 
   repos: any[];
+  projectCount: number;
 
   ngOnInit() {
-    this.updateTags('Projects', 'projects');
+    this.updateTags('Projects', 'projects'); 
+    this.getProjects();
+    this.getProjectCount();
+  }
 
+  getProjects() { 
     this.githubService.getRepos().subscribe(
       (res: any[]) => {
         var repos = [];
@@ -34,6 +39,17 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
         });
 
         this.repos = repos;
+      },
+      err => {
+        console.log(err);
+      }); 
+  }
+
+  getProjectCount() {
+    this.githubService.getProjectCount().subscribe(
+      (res: any) => {
+        this.projectCount = res.count;
+        console.log(res.count);
       },
       err => {
         console.log(err);

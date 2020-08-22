@@ -11,10 +11,14 @@ export class GitHubService extends BaseApiService<object> {
   }
 
   getRepos() {
-    return this.getList('repos');
+    return this.getList('repos/lornasw93');
   }
 
   getReadme() {
     return this.get('repo/readme/:name');
+  }
+   
+  getProjectCount() {
+    return this.count('repos/count/lornasw93');
   }
 }

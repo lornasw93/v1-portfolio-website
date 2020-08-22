@@ -33,6 +33,7 @@ export class ContactComponent extends MetaDataService implements OnInit {
   ngOnInit() {
     this.updateTags('Contact', 'contact');
   }
+
   onSubmit() {
     var data = {
       name: this.contactForm.value.name,
@@ -45,6 +46,7 @@ export class ContactComponent extends MetaDataService implements OnInit {
         Swal.fire('Thanks, ' + this.contactForm.value.name + ' 😀', 'Your request has been sent.', 'success');
       },
       err => {
+        alert(err);
         Swal.fire('Oops!', 'Something has gone wrong, please send your request via email to hello@lorna.dev.', 'error');
       }
     );
