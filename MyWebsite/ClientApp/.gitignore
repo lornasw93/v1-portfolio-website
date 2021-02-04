@@ -1,5 +1,7 @@
 .firebaserc
 package-lock.json
+/src/modules/desk
+/src/assets/Lorna_Watson_CV.pdf
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
