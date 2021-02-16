@@ -56,5 +56,5 @@ export class NavbarComponent extends BaseApiService<object> implements OnInit {
       err => {
         console.log(err);
       });
-  } 
+  }
 }

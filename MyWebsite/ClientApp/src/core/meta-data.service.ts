@@ -14,7 +14,7 @@ export abstract class MetaDataService {
 
   updateTags(tag, partUrl) {
     if (tag == null && partUrl == null) {
-      const title = 'Lorna Watson | Full-Stack Developer';
+      const title = 'Lorna Watson | Dev';
 
       this.updateTitle(title);
       this.updateUrl(this.url);

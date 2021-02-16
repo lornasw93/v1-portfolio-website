@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export abstract class BaseApiService<T> {
   baseUrl = 'https://my-apis-401f1.web.app';
   //baseUrl = 'http://localhost:5000';
-   
+
   constructor(protected httpClient: HttpClient) { }
 
   getList(resourceUrl): Observable<T[]> {
@@ -32,10 +32,9 @@ export abstract class BaseApiService<T> {
     return this.httpClient.get<T>(`${to}`);
   }
 
-  
   post(params, resourceUrl): Observable<T> {
     const to = `${this.baseUrl}/api/${resourceUrl}`;
-    
+
     //console.log(`POST: ${to}`);
     return this.httpClient.post<T>(`${to}`, params);
   }

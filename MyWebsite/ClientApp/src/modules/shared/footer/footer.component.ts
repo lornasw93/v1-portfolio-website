@@ -14,8 +14,11 @@ export class FooterComponent implements OnInit {
   faInstagram = faInstagram;
   faTwitter = faTwitter;
 
+  currentYear: number;
+
   constructor() { }
 
   ngOnInit() {
+    this.currentYear = new Date().getFullYear();
   }
 }
