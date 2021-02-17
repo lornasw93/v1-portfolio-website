@@ -447,6 +447,64 @@ section#contact {
   }
 }
 
+.band {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+.card {
+  min-height: 100%;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+
+  article {
+    padding: 20px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .thumb {
+    padding-bottom: 60%;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  p {
+    flex: 1;
+    line-height: 1.4;
+  }
+
+  a, span.updated {
+    font-size: 10px;
+    font-weight: bold;
+    color: #828282;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    margin: 2em 0 0 0;
+  }
+
+  a {
+    color: @pale-red;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
 @media (min-width: 1200px) {
   .navbar {
     padding: .5rem 3rem;
@@ -501,16 +559,6 @@ section#contact {
   }
 }
 
-.band {
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-gap: 20px;
-}
-
 @media only screen and (min-width: 500px) {
   .band {
     grid-template-columns: 1fr 1fr;
@@ -520,53 +568,5 @@ section#contact {
 @media only screen and (min-width: 850px) {
   .band {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
-
-.card {
-  min-height: 100%;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  position: relative;
-  top: 0;
-  transition: all .1s ease-in;
-
-  article {
-    padding: 20px;
-    display: flex;
-    flex: 1;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
-  .thumb {
-    padding-bottom: 60%;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  p {
-    flex: 1;
-    line-height: 1.4;
-  }
-
-  a, span.updated {
-    font-size: 10px;
-    font-weight: bold;
-    color: #828282;
-    text-transform: uppercase;
-    letter-spacing: .05em;
-    margin: 2em 0 0 0;
-  }
-
-  a {
-    color: @pale-red;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 }
