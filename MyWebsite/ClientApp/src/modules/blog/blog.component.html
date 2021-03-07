@@ -7,12 +7,12 @@
         solving a problem or in general just having that space to write my thoughts down. It's also pretty useful for when inevitably I forget
         bits I do on a reg like setting up services and new project packages to install. <a href="https://dev.to" target="_blank">DEV.to</a> has given me that
         space to free my mind and be creative, accountability in a way and may be even by helping a reader with a problem I solved - even better.
+        I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯
       </p>
-      <p>I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯</p>
     </div>
     <div class="row band">
       <div *ngFor="let post of posts; let i = index">
-        <div class="icon-box card">
+        <a href="{{post.url}}" target="_blank" class="icon-box card .clicky_log_outbound">
           <article>
             <div *ngIf="post.cover_image!=''">
               <img src="{{post.cover_image}}" class="img-fluid" />
@@ -24,16 +24,13 @@
                 <span>{{tag}}</span>
               </li>
             </ul>
-            <div class="row">
-              <div class="col-6">
-                <a href="{{post.url}}" target="_blank" class="clicky_log_outbound">
-                  <fa-icon [icon]="faDev"></fa-icon> Post
-                </a>
-              </div>
-            </div>
-            <span class="updated">Created {{post.created_at | dateAgo}}</span>
+            <span class="updated">
+              Created {{post.created_at | dateAgo}}
+              <span class="likes" *ngIf="post.public_reactions_count > 0"><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}} </span>
+              <span class="likes" *ngIf="post.comments_count > 0"><fa-icon [icon]="faComment"></fa-icon> {{post.comments_count}}</span>
+            </span>
           </article>
-        </div>
+        </a>
       </div>
     </div>
   </div>

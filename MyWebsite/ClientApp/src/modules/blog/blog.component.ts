@@ -1,7 +1,6 @@
 import { DateAgoPipe } from 'src/core/pipes/date-ago.pipe';
 import { Component, OnInit } from '@angular/core';
-import { faDev } from '@fortawesome/free-brands-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from 'src/core/meta-data.service';
 import { Title, Meta } from '@angular/platform-browser';
 import { BlogService } from "../../core/blog.service";
@@ -11,8 +10,8 @@ import { BlogService } from "../../core/blog.service";
   templateUrl: './blog.component.html'
 })
 export class BlogComponent extends MetaDataService implements OnInit {
-  faDev = faDev;
   faHeart = faHeart;
+  faComment = faComment;
 
   constructor(titleService: Title,
     metaService: Meta,
@@ -26,12 +25,8 @@ export class BlogComponent extends MetaDataService implements OnInit {
   ngOnInit() {
     this.updateTags('Blog', 'blog');
 
-    this.blogService.getPosts().subscribe(
-      (res: any[]) => {
-        this.posts = res;
-      },
-      err => {
-        console.log(err);
-      });
+    this.blogService.getPosts().subscribe((res: any[]) => {
+      this.posts = res;
+    }, err => { console.log(err); });
   }
 }
