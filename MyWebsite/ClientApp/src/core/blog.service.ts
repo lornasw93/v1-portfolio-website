@@ -11,10 +11,10 @@ export class BlogService extends BaseApiService<object> {
   }
 
   getPosts() {
-    return this.getList('posts/lornasw93');
+    return this.getList('posts');
   }
 
   getPostCount() {
-    return this.count('posts/count/lornasw93');
+    return this.count('posts/count');
   }
 }

@@ -11,7 +11,7 @@ export class GitHubService extends BaseApiService<object> {
   }
 
   getRepos() {
-    return this.getList('repos/lornasw93');
+    return this.getList('repos');
   }
 
   getReadme() {
@@ -19,6 +19,6 @@ export class GitHubService extends BaseApiService<object> {
   }
    
   getProjectCount() {
-    return this.count('repos/count/lornasw93');
+    return this.count('repos/count');
   }
 }
