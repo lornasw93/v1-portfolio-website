@@ -1,5 +1,5 @@
-<div class="blog">
-  <div class="container-fluid">
+<div id="blog" fragment="blog">
+  <div class="container">
     <h1>Blog</h1>
     <p>
       In my own way, blogging as a developer is a way of expressing myself on the web whether it be because of finding something interesting,
@@ -9,41 +9,37 @@
       I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯
     </p>
 
-    <app-loading-small *ngIf="isLoading; else grid" message="Loading posts..."></app-loading-small>
-    <ng-template #grid>
+    <app-loading-small *ngIf="isLoading; else posts" message="Loading posts..."></app-loading-small>
+    <ng-template #posts>
       <div *ngIf="noPosts; else postsSection">
         <div class="alert alert-info" role="alert">
           <p class="mb-0">No posts found</p>
         </div>
       </div>
       <ng-template #postsSection>
-        <section class="projects">
-          <div class="container">
-            <div class="row band">
-              <div *ngFor="let post of posts; let i = index">
-                <a href="{{post.url}}" target="_blank" class="icon-box card .clicky_log_outbound">
-                  <article>
-                    <div *ngIf="post.cover_image!=''">
-                      <img src="{{post.cover_image}}" class="img-fluid" />
-                    </div>
-                    <h4>{{post.title}}</h4>
-                    <p>{{post.description}}</p>
-                    <ul class="tags">
-                      <li *ngFor="let tag of post.tag_list">
-                        <span>{{tag}}</span>
-                      </li>
-                    </ul>
-                    <span class="updated">
-                      Created {{post.created_at | dateAgo}}
-                      <span class="likes" *ngIf="post.public_reactions_count > 0"><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}} </span>
-                      <span class="likes" *ngIf="post.comments_count > 0"><fa-icon [icon]="faComment"></fa-icon> {{post.comments_count}}</span>
-                    </span>
-                  </article>
-                </a>
-              </div>
-            </div>
+        <div class="row band">
+          <div *ngFor="let post of posts; let i = index">
+            <a href="{{post.url}}" target="_blank" class="icon-box card .clicky_log_outbound">
+              <article>
+                <div *ngIf="post.cover_image!=''">
+                  <img src="{{post.cover_image}}" class="img-fluid" />
+                </div>
+                <h4>{{post.title}}</h4>
+                <p>{{post.description}}</p>
+                <ul class="tags">
+                  <li *ngFor="let tag of post.tag_list">
+                    <span>{{tag}}</span>
+                  </li>
+                </ul>
+                <span class="updated">
+                  Created {{post.created_at | dateAgo}}
+                  <span class="likes" *ngIf="post.public_reactions_count > 0"><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}} </span>
+                  <span class="likes" *ngIf="post.comments_count > 0"><fa-icon [icon]="faComment"></fa-icon> {{post.comments_count}}</span>
+                </span>
+              </article>
+            </a>
           </div>
-        </section>
+        </div>
       </ng-template>
     </ng-template>
   </div>

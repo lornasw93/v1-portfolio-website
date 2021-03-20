@@ -28,7 +28,7 @@ import { TechComponent } from './tech/tech.component';
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(APP_ROUTES),
+    RouterModule.forRoot(APP_ROUTES, { anchorScrolling: 'enabled' }),
     FontAwesomeModule,
     ReactiveFormsModule,
     NgbModule,

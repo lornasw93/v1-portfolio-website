@@ -23,13 +23,13 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="'/blog'" routerLinkActive="active-link"
            [routerLinkActiveOptions]="{exact:true}">
-          Blog <span *ngIf="isPostCountLoading == true" ; else noPostCount>({{repoCount}})</span>
+          Blog <span *ngIf="isPostCountLoading == true" ; else noPostCount>({{postCount}})</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="'/projects'" routerLinkActive="active-link"
            [routerLinkActiveOptions]="{exact:true}">
-          Blog <span *ngIf="isRepoCountLoading == true" ; else noRepoCount>({{repoCount}})</span>
+          Projects <span *ngIf="isRepoCountLoading == true" ; else noRepoCount>({{repoCount}})</span>
         </a>
       </li>
       <li class="nav-item">
