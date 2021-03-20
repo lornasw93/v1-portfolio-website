@@ -1,14 +1,12 @@
-<section id="projects">
-  <div class="container" data-aos="fade-up">
-    <div class="section-title">
-      <h1>Projects</h1>
-      <p>
-        I enjoy working on projects in my spare time, it keeps me busy and motivated although while sure, at times it is difficult with a full-time job and other commitments, but it is really rewarding. In a previous role, I felt I was not getting exposure to new tech the same way everyone else on the dev team was. In this instance, I was constantly put on a separate project to everyone else whilst they were learning Angular. It suddenly hit me, why put up with it? Why am I not doing anything about it? Feeling motivated, I started learning Angular outside of work and after a while I left that job (early 2019). The spark to urn more for myself had started. Looking back, I have no idea what I did in my free time and granted, yes, at times I can feel overwhelmed due to the amount of technologies etc. out there, but overall it has been worth it.
-        I wrote a Node.js API service to get me a list of my public repos, you can see the result below. 🤯
-      </p>
-    </div>
+<div class="projects">
+  <div class="container-fluid">
+    <h1>Projects</h1>
+    <p>
+      I enjoy working on projects in my spare time, it keeps me busy and motivated although while sure, at times it is difficult with a full-time job and other commitments, but it is really rewarding. In a previous role, I felt I was not getting exposure to new tech the same way everyone else on the dev team was. In this instance, I was constantly put on a separate project to everyone else whilst they were learning Angular. It suddenly hit me, why put up with it? Why am I not doing anything about it? Feeling motivated, I started learning Angular outside of work and after a while I left that job (early 2019). The spark to urn more for myself had started. Looking back, I have no idea what I did in my free time and granted, yes, at times I can feel overwhelmed due to the amount of technologies etc. out there, but overall it has been worth it.
+      I wrote a Node.js API service to get me a list of my public repos, you can see the result below. 🤯
+    </p>
     <div class="row band">
-      <div *ngFor="let repo of repos" data-aos="zoom-in" data-aos-delay="100">
+      <div *ngFor="let repo of repos">
         <a href="{{repo.html_url}}" target="_blank" class="icon-box card .clicky_log_outbound">
           <article>
             <h4>{{repo.name}}</h4>
@@ -18,6 +16,7 @@
                 <span>{{tag}}</span>
               </li>
             </ul>
+
             <!--<a *ngIf="repo.homepage!=''" href="{{repo.homepage}}" target="_blank" onclick="clicky.goal(`Click - Projects - Website - ${repo.name}`);"><fa-icon [icon]="faGlobe"></fa-icon></a>-->
             <span class="updated">
               Updated {{repo.updated_at | dateAgo}}
@@ -29,4 +28,4 @@
       </div>
     </div>
   </div>
-</section>
+</div>

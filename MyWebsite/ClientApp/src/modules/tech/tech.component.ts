@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MetaDataService } from "../../core/meta-data.service";
-import { Title, Meta } from "@angular/platform-browser";
+import { Meta, Title } from "@angular/platform-browser";
+import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
   selector: 'app-tech',

@@ -1,16 +1,23 @@
-<section id="hero" class="d-flex align-items-center">
-  <div class="container-fluid" data-aos="fade-up">
-    <div class="row justify-content-center">
-      <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-        <h1>Hello, I'm Lorna - developer of things from Leeds, UK <fa-icon [icon]="faMapMarkerAlt"></fa-icon></h1>
-        <h2>
-          Preferably working full-stack, I'm positive and passionate with a love of Excel spreadsheets. I'm also pretty proud that I'm using a domain I bought, finally...
-        </h2>
-        <div><button [routerLink]="'/about'" alt="Find out More" onclick="clicky.goal('Click - Home - Find out more');">Find out More</button></div>
-      </div>
-      <div class="col-xl-4 col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="150">
-        <img src="assets/undraw_web_development_w2vv.svg" class="img-fluid" alt="Welcome">
+<div class="home">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Hey, I'm Lorna from Leeds, UK and work as a Software Engineer with 6+ years experience in the industry.</h1>
+
+        <p>
+          I created this portfolio website for a space to showcase info about me, my journey, blog posts and projects.
+          I'm trying to keep content up-to-date. Feel free to send over a message via my contact page or socal
+          links in the footer. I'd love to connect. 🔥
+        </p>
+
+        <button [routerLink]="'/about'" alt="Find out More" onclick="clicky.goal('Click - Home - Find out more');">Find out More</button>
       </div>
     </div>
   </div>
-</section>
+</div>
+
+<app-about></app-about>
+<app-tech></app-tech>
+<app-blog></app-blog>
+<app-projects></app-projects>
+<app-contact></app-contact>

@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder } from '@angular/forms';
-import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { MetaDataService } from 'src/core/meta-data.service';
-import { Title, Meta } from '@angular/platform-browser';
-import Swal from 'sweetalert2';
 import { HttpClient } from '@angular/common/http';
-import { EmailService } from "../../core/email.service";
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Meta, Title } from '@angular/platform-browser';
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
+import { ApiService } from '../../core/services/api.service';
+import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
   selector: 'app-contact',
@@ -19,7 +19,7 @@ export class ContactComponent extends MetaDataService implements OnInit {
     metaService: Meta,
     private fb: FormBuilder,
     public httpClient: HttpClient,
-    private service: EmailService
+    private service: ApiService
   ) {
     super(titleService, metaService);
   }

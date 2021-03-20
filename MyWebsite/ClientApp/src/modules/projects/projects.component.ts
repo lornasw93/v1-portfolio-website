@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { faStar, faDownload } from '@fortawesome/free-solid-svg-icons';
-import { Title, Meta } from '@angular/platform-browser';
-import { MetaDataService } from "../../core/meta-data.service";
-import { GitHubService } from "../../core/github.service";
+import { Meta, Title } from '@angular/platform-browser';
+import { faDownload, faStar } from '@fortawesome/free-solid-svg-icons';
+import { ApiService } from '../../core/services/api.service';
+import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
   selector: 'app-projects',
@@ -12,39 +12,30 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   faStar = faStar;
   faDownload = faDownload;
 
+  noProjects: boolean;
+  isLoading: boolean;
+  repos: any[];
+
   constructor(titleService: Title,
     metaService: Meta,
-    private githubService: GitHubService
+    private service: ApiService
   ) {
     super(titleService, metaService);
   }
 
-  repos: any[];
-  projectCount: number;
-
   ngOnInit() {
+    this.isLoading = true;
+
     this.updateTags('Projects', 'projects');
-    this.getProjects();
-    this.getProjectCount();
-  }
 
-  getProjects() {
-    this.githubService.getRepos().subscribe((res: any[]) => {
-      var repos = [];
-
-      res.forEach(value => { repos.push(value); });
-
-      this.repos = repos;
-
-      console.log(repos)
-
-    }, err => { console.log(err); });
-  }
-
-  getProjectCount() {
-    this.githubService.getProjectCount().subscribe(
-      (res: any) => {
-        this.projectCount = res.count;
-      }, err => { console.log(err); });
+    this.service.getRepos().subscribe((res: any[]) => {
+      if (res.length > 0) {
+        this.repos = res;
+      } else {
+        this.noProjects = true;
+      }
+    }).add(() => {
+      this.isLoading = false;
+    });
   }
 }

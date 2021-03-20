@@ -1,33 +1,30 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { faHome, faDownload, faBars } from '@fortawesome/free-solid-svg-icons';
 import { faDev } from '@fortawesome/free-brands-svg-icons';
-import { BaseApiService } from "../../../core/base.api.service";
-import { HttpClient } from "@angular/common/http";
-import { BlogService } from "../../../core/blog.service";
-import { GitHubService } from "../../../core/github.service";
+import { faBars, faHome } from '@fortawesome/free-solid-svg-icons';
+import { ApiService } from '../../../core/services/api.service';
+import { BaseApiService } from '../../../core/services/base.api.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html'
 })
 export class NavbarComponent extends BaseApiService<object> implements OnInit {
-  resourceUrl: 'posts/count';
-
   faHome = faHome;
   faDev = faDev;
-  faDownload = faDownload;
   faBars = faBars;
 
   navbarOpen = false;
 
-  constructor(httpClient: HttpClient,
-    private blogService: BlogService,
-    private githubService: GitHubService) {
-    super(httpClient);
-  }
-
+  isRepoCountLoading: boolean;
+  isPostCountLoading: boolean;
   postCount: number;
   repoCount: number;
+
+  constructor(httpClient: HttpClient,
+    private service: ApiService) {
+    super(httpClient);
+  }
 
   ngOnInit() {
     this.getPostCount();
@@ -39,22 +36,22 @@ export class NavbarComponent extends BaseApiService<object> implements OnInit {
   }
 
   getPostCount() {
-    this.blogService.getPostCount().subscribe(
-      (res: any) => {
-        this.postCount = res.count;
-      },
-      err => {
-        console.log(err);
-      });
+    this.isPostCountLoading = true;
+
+    this.service.getPostCount().subscribe((res: any) => {
+      this.postCount = res.count;
+    }).add(() => {
+      this.isPostCountLoading = false;
+    });
   }
 
   getProjectCount() {
-    this.githubService.getProjectCount().subscribe(
-      (res: any) => {
-        this.repoCount = res.count;
-      },
-      err => {
-        console.log(err);
-      });
+    this.isRepoCountLoading = true;
+
+    this.service.getProjectCount().subscribe((res: any) => {
+      this.repoCount = res.count;
+    }).add(() => {
+      this.isRepoCountLoading = false;
+    });
   }
 }

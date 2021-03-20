@@ -1,9 +1,8 @@
-import { DateAgoPipe } from 'src/core/pipes/date-ago.pipe';
 import { Component, OnInit } from '@angular/core';
-import { faHeart, faComment } from '@fortawesome/free-solid-svg-icons';
-import { MetaDataService } from 'src/core/meta-data.service';
-import { Title, Meta } from '@angular/platform-browser';
-import { BlogService } from "../../core/blog.service";
+import { Meta, Title } from '@angular/platform-browser';
+import { faComment, faHeart } from '@fortawesome/free-solid-svg-icons';
+import { ApiService } from '../../core/services/api.service';
+import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
   selector: 'app-blog',
@@ -13,20 +12,28 @@ export class BlogComponent extends MetaDataService implements OnInit {
   faHeart = faHeart;
   faComment = faComment;
 
+  noPosts: boolean;
+  isLoading: boolean;
+  posts: any[];
+
   constructor(titleService: Title,
     metaService: Meta,
-    private readonly blogService: BlogService
-  ) {
+    private readonly service: ApiService) {
     super(titleService, metaService);
   }
 
-  posts: any[];
-
   ngOnInit() {
+    this.isLoading = true;
     this.updateTags('Blog', 'blog');
 
-    this.blogService.getPosts().subscribe((res: any[]) => {
-      this.posts = res;
-    }, err => { console.log(err); });
+    this.service.getPosts().subscribe((res: any[]) => {
+      if (res.length > 0) {
+        this.posts = res;
+      } else {
+        this.noPosts = true;
+      }
+    }).add(() => {
+      this.isLoading = false;
+    });
   }
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg">
   <div class="navbar-brand">
     <!--<div class="logo mr-auto"><a href="/">lorna.dev</a></div>-->
     <a href="/" class="logo mr-auto"><img src="assets/favicon/white-logo.png" alt="" class="img-fluid"></a>
@@ -9,23 +9,36 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}"><fa-icon [icon]="faHome"></fa-icon></a>
+        <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}"><fa-icon [icon]="faHome"></fa-icon></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">About</a>
+        <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/tech'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Tech</a>
+        <a class="nav-link" [routerLink]="'/tech'" routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}">Tech</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/blog'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Blog ({{postCount}})</a>
+        <a class="nav-link" [routerLink]="'/blog'" routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}">
+          Blog <span *ngIf="isPostCountLoading == true" ; else noPostCount>({{repoCount}})</span>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/projects'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Projects ({{repoCount}})</a>
+        <a class="nav-link" [routerLink]="'/projects'" routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}">
+          Blog <span *ngIf="isRepoCountLoading == true" ; else noRepoCount>({{repoCount}})</span>
+        </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/contact'" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}">Contact</a>
+        <a class="nav-link" [routerLink]="'/contact'" routerLinkActive="active-link"
+           [routerLinkActiveOptions]="{exact:true}">Contact</a>
       </li>
     </ul>
   </div>
 </nav>
+
+<ng-template #noPostCount>(0)</ng-template>
+<ng-template #noRepoCount>(0)</ng-template>
