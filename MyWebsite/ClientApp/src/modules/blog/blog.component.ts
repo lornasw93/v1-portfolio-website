@@ -12,8 +12,7 @@ export class BlogComponent extends MetaDataService implements OnInit {
   faHeart = faHeart;
   faComment = faComment;
 
-  noPosts: boolean;
-  isLoading: boolean;
+  isBlogLoading: boolean;
   posts: any[];
 
   constructor(titleService: Title,
@@ -23,17 +22,13 @@ export class BlogComponent extends MetaDataService implements OnInit {
   }
 
   ngOnInit() {
-    this.isLoading = true;
+    this.isBlogLoading = true;
     this.updateTags('Blog', 'blog');
 
     this.service.getPosts().subscribe((res: any[]) => {
-      if (res.length > 0) {
-        this.posts = res;
-      } else {
-        this.noPosts = true;
-      }
+      this.posts = res;
     }).add(() => {
-      this.isLoading = false;
+      this.isBlogLoading = false;
     });
   }
 }

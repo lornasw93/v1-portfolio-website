@@ -12,7 +12,6 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   faStar = faStar;
   faDownload = faDownload;
 
-  noProjects: boolean;
   isLoading: boolean;
   repos: any[];
 
@@ -29,11 +28,7 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
     this.updateTags('Projects', 'projects');
 
     this.service.getRepos().subscribe((res: any[]) => {
-      if (res.length > 0) {
         this.repos = res;
-      } else {
-        this.noProjects = true;
-      }
     }).add(() => {
       this.isLoading = false;
     });

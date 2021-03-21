@@ -8,37 +8,13 @@
   </button>
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" [routerLink]="'/home'" routerLinkActive="active-link"
-           [routerLinkActiveOptions]="{exact:true}"><fa-icon [icon]="faHome"></fa-icon></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/about'" routerLinkActive="active-link"
-           [routerLinkActiveOptions]="{exact:true}">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/tech'" routerLinkActive="active-link"
-           [routerLinkActiveOptions]="{exact:true}">Tech</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/blog'" routerLinkActive="active-link"
-           [routerLinkActiveOptions]="{exact:true}">
-          Blog <span *ngIf="isPostCountLoading == true" ; else noPostCount>({{postCount}})</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/projects'" routerLinkActive="active-link"
-           [routerLinkActiveOptions]="{exact:true}">
-          Projects <span *ngIf="isRepoCountLoading == true" ; else noRepoCount>({{repoCount}})</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="'/contact'" routerLinkActive="active-link"
-           [routerLinkActiveOptions]="{exact:true}">Contact</a>
-      </li>
+      <li class="nav-item active"><a class="nav-link" [ngxScrollTo]="'home'"><fa-icon [icon]="faHome"></fa-icon></a></li>
+      <li class="nav-item"><a class="nav-link" [ngxScrollTo]="'about'">About</a></li>
+      <li class="nav-item"><a class="nav-link" [ngxScrollTo]="'tech'">Tech</a></li>
+      <li class="nav-item"><a class="nav-link" [ngxScrollTo]="'blog'">Blog <span *ngIf="!isPostCountLoading">({{postCount}})</span></a></li>
+      <li class="nav-item"><a class="nav-link" [ngxScrollTo]="'projects'">Projects <span *ngIf="!isRepoCountLoading">({{repoCount}})</span></a></li>
+      <li class="nav-item"><a class="nav-link" [ngxScrollTo]="'contact'">Contact</a></li>
     </ul>
   </div>
 </nav>
 
-<ng-template #noPostCount>(0)</ng-template>
-<ng-template #noRepoCount>(0)</ng-template>

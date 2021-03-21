@@ -1,26 +1,27 @@
-import { LoadingSpinnerModule } from './shared/loading-spinner/loading-spinner.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
-
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { AboutComponent } from './about/about.component';
-import { APP_ROUTES } from './app.routing';
-import { FooterComponent } from './shared/footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { BlogComponent } from './blog/blog.component';
-import { ProjectsComponent } from "./projects/projects.component";
 import { DateAgoPipe } from 'src/core/pipes/date-ago.pipe';
+import { AboutComponent } from './about/about.component';
+import { AppComponent } from './app.component';
+import { APP_ROUTES } from './app.routing';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProjectsComponent } from "./projects/projects.component";
+import { FooterComponent } from './shared/footer/footer.component';
+import { LoadingSpinnerModule } from './shared/loading-spinner/loading-spinner.module';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 import { TechComponent } from './tech/tech.component';
+
 
 @NgModule({
   imports: [
@@ -33,7 +34,8 @@ import { TechComponent } from './tech/tech.component';
     ReactiveFormsModule,
     NgbModule,
     SweetAlert2Module.forRoot(),
-    LoadingSpinnerModule
+    LoadingSpinnerModule,
+    ScrollToModule.forRoot()
   ],
   exports: [],
   declarations: [

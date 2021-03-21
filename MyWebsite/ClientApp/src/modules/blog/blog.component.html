@@ -1,6 +1,6 @@
-<div id="blog" fragment="blog">
+<div id="blog" #blog>
   <div class="container">
-    <h1>Blog</h1>
+    <h2>Blog</h2>
     <p>
       In my own way, blogging as a developer is a way of expressing myself on the web whether it be because of finding something interesting,
       solving a problem or in general just having that space to write my thoughts down. It's also pretty useful for when inevitably I forget
@@ -9,28 +9,30 @@
       I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯
     </p>
 
-    <app-loading-small *ngIf="isLoading; else posts" message="Loading posts..."></app-loading-small>
-    <ng-template #posts>
-      <div *ngIf="noPosts; else postsSection">
+    <app-loading-small *ngIf="isBlogLoading; else abc" message="Loading posts..."></app-loading-small>
+    <ng-template #abc>
+      <div *ngIf="posts.length === 0; else postsSection">
         <div class="alert alert-info" role="alert">
           <p class="mb-0">No posts found</p>
         </div>
       </div>
       <ng-template #postsSection>
         <div class="row band">
-          <div *ngFor="let post of posts; let i = index">
-            <a href="{{post.url}}" target="_blank" class="icon-box card .clicky_log_outbound">
+          <div *ngFor="let post of posts">
+            <a href="{{post.url}}" target="_blank" class="icon-box .clicky_log_outbound">
               <article>
                 <div *ngIf="post.cover_image!=''">
                   <img src="{{post.cover_image}}" class="img-fluid" />
                 </div>
                 <h4>{{post.title}}</h4>
                 <p>{{post.description}}</p>
-                <ul class="tags">
+
+                <ul>
                   <li *ngFor="let tag of post.tag_list">
                     <span>{{tag}}</span>
                   </li>
                 </ul>
+
                 <span class="updated">
                   Created {{post.created_at | dateAgo}}
                   <span class="likes" *ngIf="post.public_reactions_count > 0"><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}} </span>
