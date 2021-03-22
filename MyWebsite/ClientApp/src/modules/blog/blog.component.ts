@@ -26,7 +26,16 @@ export class BlogComponent extends MetaDataService implements OnInit {
     this.updateTags('Blog', 'blog');
 
     this.service.getPosts().subscribe((res: any[]) => {
-      this.posts = res;
+      if (res.length > 0) {
+        var r = res.sort((a, b) => {
+          return a.public_reactions_count - b.public_reactions_count
+        }).reverse();
+
+        this.posts = r.slice(0, 8).sort((a, b) => {
+          var dateA = new Date(a.created_at), dateB = new Date(b.created_at);
+          return dateA.getDate() - dateB.getDate();
+        });;
+      }
     }).add(() => {
       this.isBlogLoading = false;
     });

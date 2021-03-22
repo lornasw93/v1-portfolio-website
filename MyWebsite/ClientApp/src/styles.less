@@ -164,7 +164,7 @@ body {
   background-color: @purple-navy-background;
 }
 
-#home, #about, #tech, #blog, #projects, #contact {
+#home, #about, #dev, #blog, #projects, #contact {
   padding-top: 200px;
   padding-bottom: 200px;
 
@@ -178,10 +178,10 @@ body {
   }
 }
 
-#home, #tech, #contact, footer {
+#home, #dev, #contact, footer {
   background-color: @purple-navy-background;
 
-  h1 {
+  h1, h2 {
     color: #fffffe !important;
   }
 
@@ -213,7 +213,7 @@ body {
 #about {
   background-color: @light-puple-background;
 
-  h1, p, li {
+  h2, p, li {
     color: @headline;
   }
 
@@ -375,6 +375,11 @@ body {
 
 #blog {
   background-color: @light-pink;
+
+  a, .btn {
+    color: @card-background;
+    background: @purple-navy-background;
+  }
 }
 
 #projects {
