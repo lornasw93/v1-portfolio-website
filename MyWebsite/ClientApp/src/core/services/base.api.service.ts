@@ -6,12 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export abstract class BaseApiService<T> {
-  //baseUrl = 'http://localhost:3000';
-  baseUrl = 'https://lornasw93-my-apis.herokuapp.com';
+  baseUrl = 'http://localhost:5000';
+  //baseUrl = 'https://lornasw93-my-apis.herokuapp.com';
 
   constructor(protected client: HttpClient) { }
 
   getList(resourceUrl): Observable<T[]> {
+    console.log(`${this.baseUrl}/api/${resourceUrl}`);
+
     return this.client.get<T[]>(`${this.baseUrl}/api/${resourceUrl}`);
   }
 

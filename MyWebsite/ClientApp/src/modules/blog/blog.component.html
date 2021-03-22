@@ -1,6 +1,6 @@
 <div id="blog" #blog>
   <div class="container">
-    <h2>Blog</h2>
+    <h2>blog</h2>
     <p>
       In my own way, blogging as a developer is a way of expressing myself on the web whether it be because of finding something interesting,
       solving a problem or in general just having that space to write my thoughts down. It's also pretty useful for when inevitably I forget
@@ -33,11 +33,11 @@
                   </li>
                 </ul>
 
-                <span class="updated">
-                  Created {{post.created_at | dateAgo}}
+                <span>
                   <span class="likes" *ngIf="post.public_reactions_count > 0"><fa-icon [icon]="faHeart"></fa-icon> {{post.public_reactions_count}} </span>
                   <span class="likes" *ngIf="post.comments_count > 0"><fa-icon [icon]="faComment"></fa-icon> {{post.comments_count}}</span>
                 </span>
+                <span class="date">Created {{post.created_at | dateAgo}}</span>
               </article>
             </a>
           </div>

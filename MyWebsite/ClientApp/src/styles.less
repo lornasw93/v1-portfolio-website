@@ -168,10 +168,8 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  @link: #ff7c1f;
-
   h2 {
-    text-decoration: @link wavy underline;
+    text-decoration: #ff7c1f wavy underline;
     margin-bottom: 20px;
     padding-bottom: 20px;
     position: relative;
@@ -297,12 +295,7 @@ body {
     text-decoration: none;
     position: relative;
     top: 0;
-    /*
-    &:hover {
-      border-color: #fff;
-      box-shadow: @box-shadow;
-      text-decoration: none;
-    }*/
+
     article {
       padding: 20px;
       display: flex;
@@ -314,19 +307,12 @@ body {
         font-weight: 600;
         margin: 10px 0 15px 0;
         font-size: 20px;
-        color: red;
-        /*
-      a {
-        color: red;
-        transition: ease-in-out 0.3s;
-      }*/
       }
 
       p {
         line-height: 24px;
         font-size: 14px;
         margin-bottom: 0;
-        color: grey;
         flex: 1;
         line-height: 1.4;
       }
@@ -348,20 +334,16 @@ body {
           text-transform: uppercase !important;
           white-space: nowrap;
           padding: 3px 5px;
-          border: 1px solid grey;
-          color: grey;
         }
       }
 
-      a, span.updated {
+      a, span.updated, span.date {
         font-size: 10px;
-        color: #828282;
         text-transform: uppercase;
         letter-spacing: .05em;
         margin: 2em 0 0 0;
 
         span.likes {
-          color: #f82121;
           font-weight: 100 !important;
         }
       }
@@ -379,6 +361,38 @@ body {
   a, .btn {
     color: @card-background;
     background: @purple-navy-background;
+  }
+
+  .icon-box {
+    article {
+      background-color: @card-background;
+
+      h4, p {
+        color: @purple-navy-background;
+      }
+
+      ul li {
+        border: 1px solid @purple-navy-background;
+        color: @purple-navy-background;
+      }
+
+      span {
+        .date, .likes {
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: .05em;
+          margin: 2em 0 0 0;
+        }
+
+        .date {
+          color: #828282;
+        }
+
+        .likes {
+          color: #f82121;
+        }
+      }
+    }
   }
 }
 
