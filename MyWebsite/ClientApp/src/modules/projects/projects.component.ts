@@ -28,8 +28,6 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
     this.updateTags('Projects', 'projects');
 
     this.service.getRepos().subscribe((res: any[]) => {
-      console.log(res);
-
       this.repos = res;
     }).add(() => {
       this.isLoading = false;

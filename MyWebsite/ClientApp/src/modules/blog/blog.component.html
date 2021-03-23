@@ -1,14 +1,17 @@
 <div id="blog" #blog>
-  <div class="container">
-    <h2>blog</h2>
-    <p>
-      In my own way, blogging as a developer is a way of expressing myself on the web whether it be because of finding something interesting,
-      solving a problem or in general just having that space to write my thoughts down. It's also pretty useful for when inevitably I forget
-      bits I do on a reg like setting up services and new project packages to install. <a href="https://dev.to" target="_blank">DEV.to</a> has given me that
-      space to free my mind and be creative, accountability in a way and may be even by helping a reader with a problem I solved - even better.
-      I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯
-    </p>
-
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h2>blog</h2>
+        <p>
+          In my own way, blogging as a developer is a way of expressing myself on the web whether it be because of finding something interesting,
+          solving a problem or in general just having that space to write my thoughts down. It's also pretty useful for when inevitably I forget
+          bits I do on a reg like setting up services and new project packages to install. <a href="https://dev.to" target="_blank">DEV.to</a> has given me that
+          space to free my mind and be creative, accountability in a way and may be even by helping a reader with a problem I solved - even better.
+          I wrote a Node.js API service to get me a list of my blog posts, you can see the result below. 🤯
+        </p>
+      </div>
+    </div>
     <app-loading-small *ngIf="isBlogLoading; else abc" message="Loading posts..."></app-loading-small>
     <ng-template #abc>
       <div *ngIf="posts.length === 0; else postsSection">
