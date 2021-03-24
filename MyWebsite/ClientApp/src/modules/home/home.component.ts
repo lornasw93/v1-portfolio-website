@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
-import { Title, Meta } from '@angular/platform-browser';
+import { Meta, Title } from '@angular/platform-browser';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   templateUrl: './home.component.html'
 })
 export class HomeComponent extends MetaDataService implements OnInit {
-  faMapMarkerAlt = faMapMarkerAlt;
+  faAngleDown = faAngleDown;
 
   constructor(titleService: Title,
     metaService: Meta

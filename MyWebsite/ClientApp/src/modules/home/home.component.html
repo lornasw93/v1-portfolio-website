@@ -8,7 +8,7 @@
           I'm trying to keep content up-to-date. Feel free to send over a message via my contact page or socal
           links in the footer. I'd love to connect. 🔥
         </p>
-        <button [routerLink]="'/about'" alt="Find out More" onclick="clicky.goal('Click - Home - Find out more');">Find out More</button>
+        <a [ngxScrollTo]="'about'" [ngxScrollToEasing]="'easeInOutQuad'" alt="Find out More"><fa-icon [icon]="faAngleDown" size="2x"></fa-icon></a>
       </div>
     </div>
   </div>
