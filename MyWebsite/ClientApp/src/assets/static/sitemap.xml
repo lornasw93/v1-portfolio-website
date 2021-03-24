@@ -2,20 +2,5 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lorna.dev</loc>
-  </url>
-  <url>
-    <loc>https://lorna.dev/about</loc>
-  </url>
-  <url>
-    <loc>https://lorna.dev/tech</loc>
-  </url>
-  <url>
-    <loc>https://lorna.dev/blog</loc>
-  </url>
-  <url>
-    <loc>https://lorna.dev/projects</loc>
-  </url>
-  <url>
-    <loc>https://lorna.dev/contact</loc>
-  </url>
+  </url> 
 </urlset>
