@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from "@angular/platform-browser";
+import { faShare } from '@fortawesome/free-solid-svg-icons';
 import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
@@ -7,6 +8,9 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   templateUrl: './tech.component.html'
 })
 export class TechComponent extends MetaDataService implements OnInit {
+   
+  faShare = faShare;
+
   constructor(titleService: Title,
     metaService: Meta
   ) {

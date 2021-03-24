@@ -3,7 +3,6 @@
     <h2>projects</h2>
     <p>
       I enjoy working on projects in my spare time, it keeps me busy and motivated although while sure, at times it is difficult with a full-time job and other commitments, but it is really rewarding. In a previous role, I felt I was not getting exposure to new tech the same way everyone else on the dev team was. In this instance, I was constantly put on a separate project to everyone else whilst they were learning Angular. It suddenly hit me, why put up with it? Why am I not doing anything about it? Feeling motivated, I started learning Angular outside of work and after a while I left that job (early 2019). The spark to urn more for myself had started. Looking back, I have no idea what I did in my free time and granted, yes, at times I can feel overwhelmed due to the amount of technologies etc. out there, but overall it has been worth it.
-      I wrote a Node.js API service to get me a list of my public repos, you can see the result below. 🤯
     </p>
 
     <app-loading-small *ngIf="isLoading; else def" message="Loading projects..."></app-loading-small>
@@ -14,7 +13,7 @@
         </div>
       </div>
       <ng-template #reposSection>
-        <div class="row band">
+        <div class="row band"> 
           <div *ngFor="let repo of repos">
             <a href="{{repo.html_url}}" target="_blank" class="icon-box .clicky_log_outbound">
               <article>
@@ -37,7 +36,7 @@
             </a>
           </div>
 
-          <a href="https://github.com/lornasw93" class="btn" target="_blank" alt="More posts" onclick="clicky.goal('Click - Projects - More repos');">More repos</a>
+          <a href="https://github.com/lornasw93" class="btn" target="_blank" alt="More repos" onclick="clicky.goal('Click - Projects - More repos');">More repos ></a>
         </div>
       </ng-template>
     </ng-template>

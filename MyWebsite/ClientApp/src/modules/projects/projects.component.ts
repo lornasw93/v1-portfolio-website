@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { faDownload, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faGlobe, faStar } from '@fortawesome/free-solid-svg-icons';
 import { ApiService } from '../../core/services/api.service';
 import { MetaDataService } from '../../core/services/meta-data.service';
 
@@ -11,6 +11,7 @@ import { MetaDataService } from '../../core/services/meta-data.service';
 export class ProjectsComponent extends MetaDataService implements OnInit {
   faStar = faStar;
   faDownload = faDownload;
+  faGlobe = faGlobe;
 
   isLoading: boolean;
   repos: any[];
@@ -27,8 +28,8 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
 
     this.updateTags('Projects', 'projects');
 
-    this.service.getRepos().subscribe((res: any[]) => {
-      this.repos = res;
+    this.service.getRepos().subscribe((data: any[]) => {
+      this.repos = data;
     }).add(() => {
       this.isLoading = false;
     });
