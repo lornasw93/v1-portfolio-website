@@ -7,16 +7,17 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   selector: 'app-home',
   templateUrl: './home.component.html'
 })
-export class HomeComponent extends MetaDataService implements OnInit {
+//export class HomeComponent extends MetaDataService implements OnInit {
+export class HomeComponent implements OnInit {
   faAngleDown = faAngleDown;
 
   constructor(titleService: Title,
-    metaService: Meta
+  //  metaService: Meta
   ) {
-    super(titleService, metaService);
+   // super(titleService, metaService);
   }
 
   ngOnInit() {
-    this.updateTags(null, null);
+   // this.updateTags(null, null);
   }
 }

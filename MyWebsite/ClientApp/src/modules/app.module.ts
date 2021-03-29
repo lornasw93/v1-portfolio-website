@@ -22,7 +22,6 @@ import { LoadingSpinnerModule } from './shared/loading-spinner/loading-spinner.m
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { TechComponent } from './tech/tech.component';
 
-
 @NgModule({
   imports: [
     BrowserAnimationsModule,

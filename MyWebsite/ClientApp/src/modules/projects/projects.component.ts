@@ -8,7 +8,8 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   selector: 'app-projects',
   templateUrl: './projects.component.html'
 })
-export class ProjectsComponent extends MetaDataService implements OnInit {
+//export class ProjectsComponent extends MetaDataService implements OnInit {
+export class ProjectsComponent implements OnInit {
   faStar = faStar;
   faDownload = faDownload;
   faGlobe = faGlobe;
@@ -17,16 +18,16 @@ export class ProjectsComponent extends MetaDataService implements OnInit {
   repos: any[];
 
   constructor(titleService: Title,
-    metaService: Meta,
+   // metaService: Meta,
     private service: ApiService
   ) {
-    super(titleService, metaService);
+   // super(titleService, metaService);
   }
 
   ngOnInit() {
     this.isLoading = true;
 
-    this.updateTags('Projects', 'projects');
+   // this.updateTags('Projects', 'projects');
 
     this.service.getRepos().subscribe((data: any[]) => {
       this.repos = data;

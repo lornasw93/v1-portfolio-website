@@ -6,14 +6,15 @@ import { MetaDataService } from '../core/services/meta-data.service';
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
-export class AppComponent extends MetaDataService implements OnInit {
+//export class AppComponent extends MetaDataService implements OnInit {
+export class AppComponent implements OnInit {
   constructor(titleService: Title,
-    metaService: Meta
+   // metaService: Meta
   ) {
-    super(titleService, metaService);
+    //super(titleService, metaService);
   }
 
   ngOnInit() {
-    this.updateTags(null, null);
+    //this.updateTags(null, null);
   }
 }

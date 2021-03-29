@@ -32,7 +32,6 @@ export abstract class MetaDataService {
     this.metaService.updateTag({ name: 'og:title', content: title });
     this.metaService.updateTag({ name: 'twitter:title', content: title });
     this.metaService.updateTag({ name: 'title', property: 'og:title', content: title });
-
   }
 
   private updateUrl(url) {

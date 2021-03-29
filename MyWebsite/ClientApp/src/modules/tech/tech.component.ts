@@ -7,17 +7,17 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   selector: 'app-tech',
   templateUrl: './tech.component.html'
 })
-export class TechComponent extends MetaDataService implements OnInit {
-   
+//export class TechComponent extends MetaDataService implements OnInit {
+export class TechComponent implements OnInit {   
   faShare = faShare;
 
   constructor(titleService: Title,
-    metaService: Meta
+  //  metaService: Meta
   ) {
-    super(titleService, metaService);
+    //super(titleService, metaService);
   }
 
   ngOnInit() {
-    this.updateTags('Tech', 'tech');
+   // this.updateTags('Tech', 'tech');
   }
 }

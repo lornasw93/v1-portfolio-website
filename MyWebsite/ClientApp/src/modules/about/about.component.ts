@@ -7,16 +7,17 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   selector: 'app-about',
   templateUrl: './about.component.html'
 })
-export class AboutComponent extends MetaDataService implements OnInit {
+//export class AboutComponent extends MetaDataService implements OnInit {
+export class AboutComponent implements OnInit {
   faShareSquare = faShareSquare;
 
   constructor(titleService: Title,
-    metaService: Meta
+   // metaService: Meta
   ) {
-    super(titleService, metaService);
+   // super(titleService, metaService);
   }
 
   ngOnInit() {
-    this.updateTags('About', 'about');
+  //  this.updateTags('About', 'about');
   }
 }

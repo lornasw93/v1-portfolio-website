@@ -11,17 +11,18 @@ import { MetaDataService } from '../../core/services/meta-data.service';
   selector: 'app-contact',
   templateUrl: './contact.component.html'
 })
-export class ContactComponent extends MetaDataService implements OnInit {
+//export class ContactComponent extends MetaDataService implements OnInit {
+export class ContactComponent implements OnInit {
   faPhone = faPhone;
   faEnvelope = faEnvelope;
 
   constructor(titleService: Title,
-    metaService: Meta,
+   // metaService: Meta,
     private fb: FormBuilder,
     public httpClient: HttpClient,
     private service: ApiService
   ) {
-    super(titleService, metaService);
+    //super(titleService, metaService);
   }
 
   contactForm = this.fb.group({
@@ -31,7 +32,7 @@ export class ContactComponent extends MetaDataService implements OnInit {
   });
 
   ngOnInit() {
-    this.updateTags('Contact', 'contact');
+    //this.updateTags('Contact', 'contact');
   }
 
   onSubmit() {
