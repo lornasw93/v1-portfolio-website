@@ -1,11 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Meta, Title } from '@angular/platform-browser';
+import { Title } from '@angular/platform-browser';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 import { ApiService } from '../../core/services/api.service';
-import { MetaDataService } from '../../core/services/meta-data.service';
 
 @Component({
   selector: 'app-contact',
