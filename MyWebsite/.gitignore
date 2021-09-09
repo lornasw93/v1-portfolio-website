@@ -1,4 +1,5 @@
 .angulardoc.json
+firebase.json
 .vscode
 appsettings.json
 appsettings.Development.json
