@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { Title } from '@angular/platform-browser';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import Swal from 'sweetalert2';
 import { ApiService } from '../../core/services/api.service';
@@ -10,18 +9,14 @@ import { ApiService } from '../../core/services/api.service';
   selector: 'app-contact',
   templateUrl: './contact.component.html'
 })
-//export class ContactComponent extends MetaDataService implements OnInit {
 export class ContactComponent implements OnInit {
   faPhone = faPhone;
   faEnvelope = faEnvelope;
 
-  constructor(titleService: Title,
-   // metaService: Meta,
-    private fb: FormBuilder,
+  constructor(private fb: FormBuilder,
     public httpClient: HttpClient,
     private service: ApiService
   ) {
-    //super(titleService, metaService);
   }
 
   contactForm = this.fb.group({
@@ -31,7 +26,6 @@ export class ContactComponent implements OnInit {
   });
 
   ngOnInit() {
-    //this.updateTags('Contact', 'contact');
   }
 
   onSubmit() {

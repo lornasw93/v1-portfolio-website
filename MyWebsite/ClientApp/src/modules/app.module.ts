@@ -36,7 +36,6 @@ import { TechComponent } from './tech/tech.component';
     LoadingSpinnerModule,
     ScrollToModule.forRoot()
   ],
-  exports: [],
   declarations: [
     AppComponent,
     NavbarComponent,
@@ -49,8 +48,6 @@ import { TechComponent } from './tech/tech.component';
     BlogComponent,
     ProjectsComponent,
     DateAgoPipe
-  ],
-  providers: [
   ],
   bootstrap: [AppComponent]
 })

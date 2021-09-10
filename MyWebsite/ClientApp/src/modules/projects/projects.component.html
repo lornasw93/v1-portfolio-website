@@ -1,10 +1,21 @@
 <div id="projects" #projects>
-  <div class="container">
-    <h2>projects</h2>
-    <p>
-      I enjoy working on projects in my spare time, it keeps me busy and motivated although while sure, at times it is difficult with a full-time job and other commitments, but it is really rewarding. In a previous role, I felt I was not getting exposure to new tech the same way everyone else on the dev team was. In this instance, I was constantly put on a separate project to everyone else whilst they were learning Angular. It suddenly hit me, why put up with it? Why am I not doing anything about it? Feeling motivated, I started learning Angular outside of work and after a while I left that job (early 2019). The spark to urn more for myself had started. Looking back, I have no idea what I did in my free time and granted, yes, at times I can feel overwhelmed due to the amount of technologies etc. out there, but overall it has been worth it.
-    </p>
+  <div class="container"> 
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col-md-10">
+            <h2>projects ({{count}})</h2>
+          </div>
+          <div class="col-md-2">
+            <a href="https://github.com/lornasw93" class="btn btn-block" target="_blank" alt="More" onclick="clicky.goal('Click - Projects - More repos');">More ></a>
+          </div>
+        </div>
 
+        <p>
+          I enjoy working on projects in my spare time, it keeps me busy and motivated although while sure, at times it is difficult with a full-time job and other commitments, but it is really rewarding. In a previous role, I felt I was not getting exposure to new tech the same way everyone else on the dev team was. In this instance, I was constantly put on a separate project to everyone else whilst they were learning Angular. It suddenly hit me, why put up with it? Why am I not doing anything about it? Feeling motivated, I started learning Angular outside of work and after a while I left that job (early 2019). The spark to urn more for myself had started. Looking back, I have no idea what I did in my free time and granted, yes, at times I can feel overwhelmed due to the amount of technologies etc. out there, but overall it has been worth it.
+        </p>
+      </div>
+    </div> 
     <app-loading-small *ngIf="isLoading; else def" message="Loading projects..."></app-loading-small>
     <ng-template #def>
       <div *ngIf="repos.length === 0; else reposSection">
@@ -13,7 +24,7 @@
         </div>
       </div>
       <ng-template #reposSection>
-        <div class="row band"> 
+        <div class="row band">
           <div *ngFor="let repo of repos">
             <a href="{{repo.html_url}}" target="_blank" class="icon-box .clicky_log_outbound">
               <article>
@@ -26,7 +37,6 @@
                   </li>
                 </ul>
 
-                <!--<a *ngIf="repo.homepage!=''" href="{{repo.homepage}}" target="_blank" onclick="clicky.goal(`Click - Projects - Website - ${repo.name}`);"><fa-icon [icon]="faGlobe"></fa-icon></a>-->
                 <span>
                   <span class="likes" *ngIf="repo.forks > 0"><fa-icon [icon]="faDownload"></fa-icon> {{repo.forks}} </span>
                   <span class="likes" *ngIf="repo.stargazers_count > 0"><fa-icon [icon]="faStar"></fa-icon> {{repo.stargazers_count}}</span>
@@ -35,9 +45,7 @@
               </article>
             </a>
           </div>
-
-          <a href="https://github.com/lornasw93" class="btn" target="_blank" alt="More repos" onclick="clicky.goal('Click - Projects - More repos');">More repos ></a>
-        </div>
+            </div>
       </ng-template>
     </ng-template>
   </div>

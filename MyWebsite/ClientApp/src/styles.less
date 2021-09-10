@@ -111,6 +111,30 @@ nav {
       position: relative;
       white-space: nowrap;
       padding: 10px 0 10px 24px;
+
+      .social a {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.1);
+        line-height: 1;
+        padding: 8px 0;
+        margin-right: 4px;
+        border-radius: 50%;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        transition: 0.3s;
+        box-shadow: @box-shadow;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+          color: #fff;
+          text-decoration: none;
+        }
+
+        img {
+          height: 18px;
+        }
+      }
     }
   }
 
@@ -147,31 +171,6 @@ footer {
   .copyright a {
     font-weight: 700;
     text-decoration: underline;
-  }
-
-  .social-links a {
-    font-size: 16px;
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
-    line-height: 1;
-    padding: 8px 0;
-    margin-right: 4px;
-    border-radius: 50%;
-    text-align: center;
-    width: 32px;
-    height: 32px;
-    transition: 0.3s;
-    box-shadow: @box-shadow;
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.2);
-      color: #fff;
-      text-decoration: none;
-    }
-  }
-
-  fa-icon {
-    color: @card-background;
   }
 }
 
@@ -404,7 +403,7 @@ body {
   background-color: @light-pink;
 
   .btn {
-    color: @purple-navy-background !important;
+    color: #fffffe;
     background-color: @secondary;
   }
 
@@ -469,7 +468,6 @@ body {
     }
   }
 }
-
 /* #region Responsive */
 @media (min-width: 1200px) {
   .navbar {

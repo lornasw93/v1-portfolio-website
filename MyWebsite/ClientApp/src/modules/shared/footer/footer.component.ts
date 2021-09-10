@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faLinkedinIn, faGithubAlt, faFacebookF, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faGithubAlt, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faAngleUp, faAt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,7 +12,6 @@ export class FooterComponent implements OnInit {
   faGithubAlt = faGithubAlt;
   faFacebookF = faFacebookF;
   faInstagram = faInstagram;
-  faTwitter = faTwitter;
   faAngleUp = faAngleUp;
 
   currentYear: number;

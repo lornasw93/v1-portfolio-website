@@ -14,5 +14,4 @@ export class LoadingSmallComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
